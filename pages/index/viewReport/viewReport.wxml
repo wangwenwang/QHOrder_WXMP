@@ -1,0 +1,28 @@
+<!--pages/index/viewReport/viewReport.wxml-->
+<view class='reportContainer' style='display:{{allHidden}}'>
+  <view class='selectReport' bindtap='typeShow'>报表选择：<text>{{reportSelect}}</text><i class="iconfont icon-xiangyou"></i></view>
+  <view style='width:6000rpx;background-color:#EC7426;color:#fff;font-size:24rpx;padding-left:50rpx;margin:50rpx 0;'>滑动此处</view>
+  <!--图表 开始  -->
+   <movable-area scale-area="true" style="width:6000rpx;height:1200rpx;display:block;">
+    <movable-view direction="horizontal"   out-of-bounds="true"  scale="true"  x="60rpx" style="width:6000rpx;height:1200rpx;display:block;">
+      <canvas  canvas-id="lineCanvas" disable-scroll="true" class="canvas" ></canvas>
+    </movable-view>
+   </movable-area >
+  <!--图表 结束  -->
+
+  <view class='footer'>
+    <view class='foot_first'  bindtap='cakeChart'>圆饼分析图</view>
+    <view  bindtap='pillarChart'>条形统计图</view>
+  </view>
+</view>
+<view class='reportType' style='display:{{typeHidden}}'>
+  <view class='typeContainer'>
+    <view class='typeHead'>请选择报表类型：</view>
+    <view class='customer' bindtap='customerReport'>客户报表</view>
+    <view class='product'  bindtap='productReport'>产品报表</view>
+    <view class='typeCancel' bindtap='typeCancel'>取消</view>
+  </view>
+</view>
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

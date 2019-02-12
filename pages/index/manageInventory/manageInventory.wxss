@@ -1,0 +1,87 @@
+/* pages/index/manageInventory/manageInventory.wxss */
+@import "../../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:57rpx;
+  font-style:normal;
+  color: #666666;
+  margin: 15rpx 0;
+}
+.manageInventory{
+  width:100%;
+  padding: 15rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+.customerInfo{
+  width:100%;
+  height: 240rpx;
+  background-color: #E7E7EC;
+  padding: 30rpx 15rpx;
+  box-sizing: border-box;
+  border-radius: 5rpx;
+}
+.customerInfo view,.addressInfo view{
+  margin-bottom: 15rpx;
+}
+.customerInfo text,.addressInfo text{
+  color: red;
+}
+.addressInfo{
+  width:100%;
+  background-color: #E7E7EC;
+  padding: 30rpx 15rpx;
+  box-sizing: border-box;
+  border-radius: 5rpx;
+  margin: 20rpx 0;
+}
+.warehouse{
+  width: 100%;
+  height: 270rpx;
+  background-color: #FEE3D9;
+  border-radius: 5rpx;
+  overflow: hidden;
+}
+.warehouse>view{
+  width:177.5rpx;
+  height:135rpx;
+  float: left;
+  text-align: center;
+}
+.goodsList{
+  width:100%;
+  margin-top: 30rpx;
+}
+.goodsList text{
+  color: red;
+}
+.goodsList>.listDetail{
+  width:100%;
+  height: 135rpx;
+  background-color: #E7E7EC;
+  padding: 20rpx 15rpx;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 10rpx;
+  border-radius: 10rpx;
+}
+.goodsList>.listDetail>view{
+  margin-bottom: 15rpx;
+}
+.goodsList>.listDetail>icon{
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  font-size: 35rpx;
+}
+/* //没有库存提示 */
+.nullNote{
+  width: 100%;
+  color: #C6C6C6;
+  text-align: center;
+  margin-top: 70rpx;
+}
+.nullNote .icon-dingdan{
+  font-size: 128rpx;
+  color: #C6C6C6;
+}

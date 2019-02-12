@@ -1,0 +1,9 @@
+<!--pages/index/news/news.wxml-->
+<view class='newsContainer'>
+  <text>尊敬的各经销商客户：</text>
+  <textarea  decode="true" space="true">我司于8月份正式启用APP对账模式，即每月10号前我司将在APP上出具各经销商截止上月月底余额，请各经销商客户及时在APP进行查看与核实，有问题请及时反馈。</textarea>
+  <view class='newsFoot'>
+    <view bindtap='isPhone'>电话：13243863247</view>
+    <text>联系人：桂小姐，谢谢！</text>
+  </view>
+</view>

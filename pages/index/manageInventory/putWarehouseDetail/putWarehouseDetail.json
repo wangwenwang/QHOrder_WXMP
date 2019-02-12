@@ -1,0 +1,7 @@
+{
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#EC7426",
+  "navigationBarTitleText": "入库明细",
+  "navigationBarTextStyle": "#fff",
+  "enablePullDownRefresh": true
+}

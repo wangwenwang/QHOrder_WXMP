@@ -1,0 +1,37 @@
+/* pages/index/manageInventory/putWarehouseDetail/putWarehouseDetail.wxss */
+@import "../../../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:128rpx;
+  margin-bottom: 25rpx;
+
+
+}
+.putWarehouseDetail{
+  width:100%;
+  font-size: 26rpx;
+}
+.putWarehouseList{
+  width:100%;
+  height: 230rpx;
+  color: #8B8B8D;
+  padding: 20rpx 15rpx;
+  box-sizing: border-box;
+  border-bottom: 20rpx solid #EEEFF2;
+  background-color: #fff;
+}
+.float{
+  float: right;
+ 
+}
+
+/* //没有入库明细提示 */
+.nullNote{
+  width: 100%;
+  height:226rpx;
+  color: #D5D5D5;
+  text-align: center;
+  position: absolute;
+  top:400rpx;
+  left: 0;
+}

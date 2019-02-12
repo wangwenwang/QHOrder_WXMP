@@ -1,0 +1,21 @@
+<!--pages/index/inventoryReg/inventoryReg.wxml-->
+<view class='inventoryReg'>
+  <view class='head' bindtap='customerList'>
+    <i class="iconfont icon-icon--"></i>
+  </view>
+  <view  class='inventoryList' bindtap='inventoryDetail' id="{{idx}}" wx:for="{{listData}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+    <view>客户代码：<text>{{itemName.PARTY_CODE}}</text></view>
+    <view>客户名称：<text>{{itemName.PARTY_NAME}}</text></view>
+    <view>库存月份：<text>{{itemName.STOCK_DATE}}</text></view>
+    <view>填表日期：<text>{{itemName.SUBMIT_DATE}}</text></view>
+  </view>
+  <view class='noneData' wx:if="{{hasData}}">
+    <i class="iconfont icon-kulian"></i>
+    <view>您还没有库存登记表哦</view>
+  </view>
+</view>
+
+<!--提示信息  -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

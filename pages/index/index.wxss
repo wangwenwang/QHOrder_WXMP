@@ -1,0 +1,45 @@
+/* pages/index/index.wxss */
+@import "../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:81rpx;
+  font-style:normal;
+  color: #EC7426;
+  display: block;
+  margin-top: 65rpx;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.indexContainer{
+  width:100%;
+  height:100%;
+  background-color: #EEEDF2;
+}
+.indexContainer .wiper,.indexContainer swiper{
+  width:100%;
+  height:375rpx;
+}
+.wiper image{
+  width:100%;
+  height:100%;
+}
+.option{
+  width:100%;
+  overflow: hidden;
+   background-color: #EEEDF2;
+}
+.option>view{
+  width:33%;
+  height:230rpx;
+  float: left;
+  margin-right: 0.5%;
+  margin-bottom: 0.5%;
+  background-color: #fff;
+  text-align: center;
+}
+.option>view:nth-child(3),.option>view:nth-child(6){
+   margin-right:0;
+}
+.option>view>text{
+  font-size: 22rpx;
+}

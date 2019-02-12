@@ -1,0 +1,87 @@
+/* pages/search/orderDetail/orderDetail.wxss */
+@import "goodsTemplate/goodsTemplate.wxss";
+.oDetailContainer{
+  width:100%;
+  height:100%;
+  background-color: #EDEDF2;
+  font-size: 23rpx;
+
+}
+.oDetailContainer>.orderInfo{
+  
+  padding:10rpx 16rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+ 
+}
+.oDetailContainer>.orderInfo>view{
+  margin: 10rpx;
+  overflow: hidden;
+}
+.oDetailContainer>.orderInfo>view.infoHead,.goodsHead,.giftHead{
+  font-size: 29rpx;
+  margin: 0 10rpx 25rpx;
+  width: 300rpx;
+}
+.oDetailContainer>.orderInfo>view text{
+  color: red;
+}
+.oDetailContainer>.orderInfo>view{
+  overflow: hidden;
+}
+.oDetailContainer>.orderInfo>view>view{
+  float: left;
+  width: 347rpx;
+}
+.oDetailContainer>.goodsInfo,.giftInfo{
+  padding: 0 8rpx;
+  box-sizing: border-box;
+  padding-bottom: 12rpx;
+  background-color: #EDEDF2;
+ 
+}
+
+.goodsList{
+  width:100%;
+  height:200rpx;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 5rpx;
+}
+ 
+.giftContent>.noneGift{
+  color: red;
+  width: 200rpx;
+  margin-left: 30rpx;
+}
+.elseInfo{
+  padding: 40rpx 30rpx  83rpx;
+  box-sizing: border-box;
+  background-color: #EDEDF2;
+}
+.elseInfo>view{
+  margin-bottom: 15rpx;
+}
+.elseInfo text{
+  color: red;
+}
+.footer{
+  width:100%;
+  height:83rpx;
+  background-color: #EDEDF2;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.footer>view{
+  width:190rpx;
+  height:55rpx;
+  background-color: #E7612E;
+  color: #fff;
+  text-align: center;
+  line-height: 55rpx;
+  margin: 14rpx auto;
+  font-size: 25rpx;
+  border-radius: 10rpx;
+}

@@ -1,0 +1,63 @@
+<!--pages/index/manageInventory/manageInventory.wxml-->
+<view class='manageInventory'>
+  <view class='customerInfo'>
+    <view>客户类型：<text>{{PARTY_TYPE}}</text></view>
+    <view>客户代码：<text>{{PARTY_CODE}}</text></view>
+    <view>客户城市：<text>{{PARTY_CITY}}</text></view>
+    <view>客户名称：<text>{{PARTY_NAME}}</text></view>
+  </view>
+  <view class='addressInfo'>
+    <view>联系人名：<text>{{CONTACT_PERSON}}</text></view>
+    <view>地址代码：<text>{{ADDRESS_CODE}}</text></view>
+    <view>地址详情：<text>{{ADDRESS_INFO}}</text></view>
+  </view>
+  <view class='warehouse'>
+     <view bindtap='putWarehouseDetail'>
+      <icon class="iconfont icon-72"></icon>
+      <view>入库明细</view>
+    </view>
+    <view bindtap='putReturn'>
+      <icon class="iconfont icon-list_tuihuoshenqingshenhe"></icon>
+      <view>入库退货</view>
+    </view>
+    <view bindtap='check'>
+      <icon class="iconfont icon-pandian"></icon>
+      <view>盘点</view>
+    </view>
+    <view bindtap='elseInput'>
+      <icon class="iconfont icon-rukudengji"></icon>
+      <view>其他入库</view>
+    </view>
+     <view bindtap='outWarehouseDetail'>
+      <icon class="iconfont icon-72"></icon>
+      <view>出库明细</view>
+    </view>
+    <view bindtap='salesOut'>
+      <icon class="iconfont icon-xiaoshouchuku"></icon>
+      <view>销售出库</view>
+    </view>
+    <view bindtap='outReturn'>
+      <icon class="iconfont icon-list_tuihuoshenqingshenhe"></icon>
+      <view>出库退货</view>
+    </view>
+    <view bindtap='elseOut'>
+      <icon class="iconfont icon-chukudengji"></icon>
+      <view>其他出库</view>
+    </view>
+  </view>
+  <view class='goodsList'>
+    <view class='listDetail'  bindtap='toWarehouseDetail' id="{{idx}}" wx:for="{{goodsList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+      <view>名称：<text>{{itemName.PRODUCT_NAME}}</text></view>
+      <view>数量：<text>{{itemName.STOCK_QTY}}{{itemName.STOCK_UOM}}</text></view>
+      <icon class="iconfont icon-xiangyou"></icon>
+    </view>
+  </view>
+  <view  class='nullNote' style='display:{{nullHidden}}'>
+    <icon class="iconfont icon-dingdan"></icon>
+    <view>您还没有库存</view>
+  </view>
+</view>
+<!--提示信息  -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

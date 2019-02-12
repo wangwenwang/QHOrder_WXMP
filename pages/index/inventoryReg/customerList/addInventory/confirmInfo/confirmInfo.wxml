@@ -1,0 +1,23 @@
+<!--pages/index/inventoryReg/customerList/addInventory/confirmInfo/confirmInfo.wxml-->
+<view class='confirmInfo'>
+  <view class='month'>库存月份：2018-01</view>
+  <view class='month'>填表日期：2018-01-26</view>
+  <view class='customerInfo'>
+    <view>客户类型：<text>{{strProductType}}</text></view>
+    <view>客户代码：<text>{{PARTY_CODE}}</text></view>
+    <view>客户城市：<text>{{PARTY_CITY}}</text></view>
+    <view>客户名称：<text>{{PARTY_NAME}}</text></view>
+  </view>
+  <view class='goodsList' >
+    <view>名称：<text>{{itemName.PRODUCT_NAME}}奶茶原味</text></view>
+    <view>规格：<text>{{itemName.PRODUCT_DESC}}</text></view>
+    <view>原价：<text>¥{{itemName.PRODUCT_PRICE}}.0</text></view>
+    <view class='quantity'>库存数量：<text></text></view>
+    <view>生产日期：<text class='inventoryDate'></text></view>
+  </view>
+  
+</view>
+ <view class='previewContainer'>
+    <view class='preview' bindtap='submit'>提交</view>
+  </view>
+<!-- id="{{idx}}" wx:for="{{goodsList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key"  -->

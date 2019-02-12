@@ -1,0 +1,69 @@
+/* pages/search/orderDetail/logisticsInfo/logisticsInfo.wxss */
+@import "../../../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:25rpx;
+  margin-bottom: 25rpx;
+  position: absolute;
+  top:130rpx;
+  right:15rpx;
+  color: #B4C0C0;
+}
+.logisticsContainer{
+  width:100%;
+  height:100%;
+  padding: 40rpx 16rpx;
+  box-sizing: border-box;
+  background-color: #EDEDF2;
+}
+.logisticsContainer>.orderInfo>.infoHead,.billHead{
+  font-size: 28rpx;
+}
+.infoContainer{
+  padding:15rpx 15rpx;
+  box-sizing: border-box;
+}
+.infoContainer view,.billList>view{
+  font-size: 22rpx;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+}
+.infoContainer>view>view,.billList>view>view{
+  float: left;
+  width:344rpx;
+}
+.logisticsContainer text{
+  color: red;
+  font-size: 22rpx;
+  margin-left: 15rpx;
+}
+/*模板样式  */
+.billList{
+  width: 100%;
+  background-color: #fff;
+  height:310rpx;
+  margin-top: 10rpx;
+  border-radius: 10rpx;
+  font-size: 22rpx;
+  padding: 10rpx 15rpx;
+  box-sizing: border-box; 
+  position: relative;
+}
+.btn{
+  display: flex;
+}
+.btn>view{
+  flex-grow: 1;
+  height:50rpx;
+  background-color: #E7612E;
+  color: #fff;
+  text-align: center;line-height: 50rpx;
+  border-radius: 10rpx;
+}
+.progress{
+   margin-right: 27rpx; 
+}
+.sign{
+  margin-left: 27rpx;
+
+}

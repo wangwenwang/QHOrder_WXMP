@@ -1,0 +1,97 @@
+<!--pages/order/selectGoods/orderCertain/orderCertain.wxml-->
+<view class='orderCertain'>
+  <view class='orderInfo'>
+    <view class='head'>订单信息：</view>
+    <view class='orderList' id="{{idx}}" wx:for="{{orderList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+      <view>
+        <text class='long floatLeft'>{{itemName.PRODUCT_NAME}}</text> 
+        <view class='listLast floatRight' wx:if="{{priceReg[idx]}}">
+          <text class='black'>现价：</text>
+          <icon class="iconfont icon-jian" id="{{idx}}" catchtap='jian'></icon>
+          <text catchtap='entryShow' id='{{idx}}'>{{regNumber[itemName.PRODUCT_IDX]}}</text>
+          <icon class="iconfont icon-jia" id="{{idx}}" catchtap='jia'></icon>
+        </view>
+        <view wx:else class='floatRight'>现价：<text>{{itemName.ACT_PRICE}}</text></view> 
+      </view>
+      <view>
+        <view  class='long floatLeft'>原价：<text>{{itemName.ORG_PRICE}}</text></view>
+      <view class='floatRight'>数量：<text>{{itemName.PO_QTY}}</text></view>
+      </view>
+    </view>
+  </view>
+  <view class='giftInfo'>
+    <view class='head'>赠品：</view>
+    <view class='haveGift'  wx:for="{{GiftClasses}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+      <view class='icon'>
+        <i class="iconfont icon-liwu"></i>
+      </view>
+      <view class='listCenter'>
+        <view>{{itemName.PRODUCT_NAME}}</view>
+        <view>{{itemName.SALE_REMARK}}</view>
+        <view><view class='org_float'>原价：<text>{{itemName.ORG_PRICE}}</text></view><view>现价：<text>{{itemName.ACT_PRICE}}</text></view></view>
+      </view>
+      <view class='gift_right'>
+        {{itemName.PO_QTY}}
+      </view>
+    </view>
+    <view class='noneGift' style='display:{{noneGift}}'>
+      <text style='display:{{giftNone}}'>无赠品</text>
+      <view style='display:{{addGift_hidden}}' bindtap='addGift'>{{addGift}}</view>
+    </view>
+  </view>
+  <view class='total'>
+    <view class='head'>总计：</view>
+    <view>总数：<text>{{TOTAL_QTY}}</text></view>
+    <view>原价：<text>¥{{ORG_PRICE}}</text></view>
+    <view>付款方式：<text>{{pay_typeInfo}}</text></view>
+    <view style='display:{{MJ_hidden}}'>促销策略：<text>{{MJ_REMARK}}</text></view>
+    <view style='display:{{MJ_hidden}}'>满减总计：<text>{{MJ_PRICE}}</text></view>
+    <view>实际付款：<text>¥{{ACT_PRICE}}</text></view>
+  </view>
+  <view class='arrDate' bindtap='dateShow'>
+    <text>选择送货时间:</text><i class="iconfont icon-xiangyou"></i><view style='display:{{dateSelect}}'>{{year}}年{{month}}月{{day}}日</view>
+  </view>
+  <textarea placeholder='请输入备注信息' bindinput='CONSIGNEE_REMARK' maxlength="-1" style='display:{{textareaHidden}}'></textarea>
+  <view class='orderCertain_btn' bindtap='orderSubmit'>确认</view>
+</view>
+
+<!--时间选择器  -->
+<view class='mengban' style='display:{{mbHidden}}'>
+  <view>
+    <picker-view indicator-style="height: 50px;"   value="{{value}}" bindchange="bindChange">
+      <picker-view-column   style="margin-left:90rpx">
+        <view wx:for="{{years}}" style="line-height: 50px"  wx:for-item='itemName' wx:for-index="idx" wx:key="key">{{itemName}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" style="line-height: 50px"  wx:for-item='itemName' wx:for-index="idx" wx:key="key">{{itemName}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" style="line-height: 50px"  wx:for-item='itemName' wx:for-index="idx" wx:key="key">{{itemName}}日</view>
+      </picker-view-column>
+    </picker-view>
+    <view class='btn'>
+      <view class='cancel' bindtap='cancel'>取消</view>
+      <view class='ensure' bindtap='ensure'>确认</view>
+    </view>
+  </view>
+</view>
+
+<!--输入框  -->
+ <view class='entryNumber' style='display:{{isHidden}}'>
+  <view class='entry_contaniner'>
+    <view>请输入产品价格：</view>
+    <view>可调整价格上限：<text>{{submitArr[inputNum].PRODUCT_POLICY[0].AMOUNT_END}}</text></view>
+    <view>可调整价格下限：<text>{{submitArr[inputNum].PRODUCT_POLICY[0].AMOUNT_START}}</text></view>
+    <input bindinput='goodsNum' type='number'></input>
+    <view class='btn'>
+      <view class='en_cancel' bindtap='cancel_entry'>取消</view>
+      <view class='en_ensure' bindtap='ensure_entry'>确定</view>
+    </view>
+  </view>
+</view> 
+
+<!-- 提示信息 -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>
+

@@ -1,0 +1,48 @@
+/* pages/register/register.wxss */
+@import "../../lib/style/font.wxss";
+.regContainer{
+  width: 100%;
+  margin-top: 40rpx;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+}
+.regContainer>view{
+  margin-bottom: 65rpx;
+}
+.regContainer>view>text{
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.regContainer>view>input{
+  width: 100%;
+  height: 77rpx;
+  border: 1px solid #eee;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+  font-size: 25rpx;
+}
+button{
+  width:100%;
+  height: 77rpx;
+  background-color: #E7612E;
+  color: #fff;
+  margin-bottom: 50rpx;
+  box-sizing: border-box;
+}
+.userAddress>.userArea{
+  background-color: #EDEDF2;
+  position: relative;
+}
+.userAddress>.userArea::after{
+  font-family: 'iconfont';
+  font-style: normal;
+  content:"\e636";
+  position: absolute;
+  color: #C3C3C3;
+  right:30rpx;
+  top:24.5rpx;
+  font-size: 28rpx;
+  z-index: 11;
+}

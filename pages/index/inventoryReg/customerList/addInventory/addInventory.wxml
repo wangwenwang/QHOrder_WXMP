@@ -1,0 +1,53 @@
+<!--pages/index/inventoryReg/customerList/addInventory/addInventory.wxml-->
+<view class='addInventory'>
+  <view class='month'>
+    <view>库存月份：<text class='inventoryDate' style='border-bottom:{{textBorder}}' bindtap='monthSelect'>{{inventoryMonth}}</text></view>
+  </view>
+  <view class='month'>填表日期：{{currentDate}}</view>
+  <view class='customerInfo'>
+    <view>客户类型：<text>{{options.strProductType}}</text></view>
+    <view>客户代码：<text>{{options.PARTY_CODE}}</text></view>
+    <view>客户城市：<text>{{options.PARTY_CITY}}</text></view>
+    <view>客户名称：<text>{{options.PARTY_NAME}}</text></view>
+  </view>
+  <view class='goodsList'  id="{{idx}}" wx:for="{{goodsList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+    <view class='goodsTop'>
+      <view class='goodsLeft'>
+        <view>名称：<text>{{itemName.PRODUCT_NAME}}</text></view>
+        <view>规格：<text>{{itemName.PRODUCT_DESC}}</text></view>
+        <view>原价：<text>¥{{itemName.PRODUCT_PRICE}}.0</text></view>
+      </view>
+      <view class='goodsRight'>
+        <icon class="iconfont icon-jian" id="{{idx}}"  bindtap='jian'></icon>
+        <icon class="iconfont icon-jia"  id="{{idx}}" bindtap='jia'></icon>
+      </view>
+    </view>
+    <view id="{{idx}}" wx:for="{{inventoryNumber[idx]}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+      <view class='quantity'><text>库存数量：</text><input type='number'></input></view>
+      <view>生产日期：<text class='inventoryDate' style='border-bottom:1px solid #F28B31;'></text></view>
+    </view>
+  </view>
+</view>
+<view class='previewContainer'>
+  <view class='preview' bindtap='toConfirmInfo'>预览</view>
+</view>
+<view class='mengban' style='display:{{mbHidden}}'>  
+    <picker-view indicator-style="height: 50px;"   value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{years}}" style="line-height: 50px"  wx:for-item='itemName' wx:for-index="idx" wx:key="key">{{itemName}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" style="line-height: 50px"  wx:for-item='itemName' wx:for-index="idx" wx:key="key">{{itemName}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" style="line-height: 50px"  wx:for-item='itemName' wx:for-index="idx" wx:key="key">{{itemName}}日</view>
+      </picker-view-column>
+    </picker-view>
+    <view class='btn'>
+      <view class='cancel' bindtap='cancel'>取消</view>
+      <view class='ensure' bindtap='ensure'>确认</view>
+    </view>
+</view>
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

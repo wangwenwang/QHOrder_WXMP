@@ -1,0 +1,7 @@
+<template name="detailTemplate">
+  <view>产品名称：
+    <text>{{PRODUCT_NAME}}</text>
+  </view>
+  <view class='bottom'><view>产品编号：<text>{{PRODUCT_NO}}</text></view><view>产品总量：<text>{{ISSUE_QTY}}.0箱</text></view></view>
+  <view class='bottom'><view>产品总重：<text>{{ISSUE_WEIGHT}}吨</text></view><view>产品体积：<text>{{ISSUE_VOLUME}}m³</text></view></view>
+</template>

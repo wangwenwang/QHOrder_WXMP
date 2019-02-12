@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/search/orderDetail/logisticsInfo/sign/sign",
+    "pages/search/orderDetail/logisticsInfo/logisticsInfo",
+    "pages/index/monthlyPlan/planOrderCertain/planOrderCertain",
+    "pages/order/selectGoods/orderCertain/addGift/addGift",
+    "pages/index/monthlyPlan/monthlyPlan",
+    "pages/index/monthlyPlan/planDetail/planDetail",
+    "pages/index/manageInventory/warehouseDetail/inAndOut/inAndOut",
+    "pages/index/manageInventory/warehouseDetail/warehouseDetail",
+    "pages/index/manageInventory/putWarehouseDetail/putDetails/putDetails",
+    "pages/index/manageInventory/putWarehouseDetail/putWarehouseDetail",
+    "pages/index/manageInventory/manageInventory",
+    "pages/index/billList/feeList/feeList",
+    "pages/index/billList/billList",
+    "pages/index/inventoryReg/customerList/addInventory/confirmInfo/confirmInfo",
+    "pages/index/inventoryReg/customerList/addInventory/addInventory",
+    "pages/index/inventoryReg/customerList/customerList",
+    "pages/order/order",
+    "pages/index/inventoryReg/inventoryReg",
+    "pages/index/inventoryReg/inventoryDetail/inventoryDetail",
+    "pages/index/viewReport/viewReport",
+    "pages/order/selectGoods/orderCertain/orderCertain",
+    "pages/order/selectGoods/selectGoods",
+    "pages/index/index",
+    "pages/search/orderDetail/logisticsInfo/progress/progress",
+    "pages/search/orderDetail/logisticsInfo/logisticsDetail/logisticsDetail",
+    "pages/search/orderDetail/orderDetail",
+    "pages/search/search",
+    "pages/home/rePassword/rePassword",
+    "pages/home/home",
+    "pages/home/about/about",
+    "pages/index/hotGoods/hotGoods",
+    "pages/index/news/news",
+    "pages/register/register",
+    "pages/search/orderDetail/logisticsInfo/line/line",
+    "pages/index/manageInventory/outWarehouseDetail/outWarehouseDetail",
+    "pages/index/manageInventory/outWarehouseDetail/outDetails/outDetails"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "lib/image/index.png",
+        "selectedIconPath": "lib/image/index_1.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "下单",
+        "iconPath": "lib/image/order.png",
+        "selectedIconPath": "lib/image/order_1.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "查单",
+        "iconPath": "lib/image/search.png",
+        "selectedIconPath": "lib/image/search_1.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "lib/image/home.png",
+        "selectedIconPath": "lib/image/home_1.png"
+      }
+    ],
+    "color": "#7A7A78",
+    "selectedColor": "#EC7426",
+    "backgroundColor": "#F3F4F6",
+    "borderStyle": "white"
+  }
+}

@@ -1,0 +1,19 @@
+<!--pages/search/orderDetail/logisticsInfo/sign/sign.wxml-->
+<view class='signContainer'>
+
+  <view>
+    <view class='signHead'>订单签收：</view>
+    <image src='{{orderSign}}'></image>
+  </view>
+
+  <view>
+    <view class='signHead'>交货现场图：</view>
+    <image src='{{delivery1}}'></image>
+  </view>
+
+  <view>
+    <view class='signHead'>交货现场图：</view>
+    <image src='{{delivery2}}'></image>
+  </view>
+
+</view>

@@ -1,0 +1,9 @@
+<!--pages/search/orderDetail/logisticsInfo/progress/progress.wxml-->
+<view class='progressContainer'>
+  <view  wx:for="{{resultData}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key"><icon type='success'></icon><text>{{itemName.ORDER_STATE}}</text><text>{{itemName.STATE_TIME}}</text></view>
+</view>
+
+<!--提示信息  -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

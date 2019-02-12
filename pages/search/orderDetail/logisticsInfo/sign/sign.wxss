@@ -1,0 +1,19 @@
+/* pages/search/orderDetail/logisticsInfo/sign/sign.wxss */
+.signContainer{
+  font-size: 26rpx;
+  width: 100%;
+  height: 100%;
+}
+.signContainer>view{
+  width:100%;
+  text-align: center;
+}
+.signHead{
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+image{
+  width: 580rpx;
+  height: 280rpx;
+  margin: 40rpx auto;
+}

@@ -1,0 +1,25 @@
+<!--pages/search/orderDetail/logisticsInfo/logisticsInfo.wxml-->
+<import src="billTemplate/billTemplate.wxml"/>
+<view class='logisticsContainer'>
+  <view class='orderInfo'>
+    <view class='infoHead'>订单信息：</view>
+    <view class='infoContainer'>
+      <view>客户名称：<text>{{ORD_TO_NAME}}</text></view>
+      <view>目的地址：<text>{{ORD_TO_ADDRESS}}</text></view>
+      <view><view>下单总量：<text>{{ORD_QTY}}件</text></view><view>发货总量：<text>{{TMS_QTY}}件</text></view></view>
+      <view><view>下单总重：<text>{{ORD_WEIGHT}}吨</text></view><view>发货重量：<text>{{TMS_WEIGHT}}吨</text></view></view>
+      <view><view>下单体积：<text>{{ORD_VOLUME}}m³</text></view><view>发货体积：<text>{{TMS_VOLUME}}m³</text></view></view>
+    </view>
+  </view>
+  <view class='billInfo'>
+    <view class='billHead'>原单/拆单：</view>
+    <view class='billContainer'>
+      <template is="billTemplate" data="{{TmsList}}"></template>  
+      <text wx:if="{{!TmsList.length}}">无</text>
+    </view>
+  </view>
+</view>
+<!--提示信息  -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

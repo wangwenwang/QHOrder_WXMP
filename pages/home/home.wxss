@@ -1,0 +1,58 @@
+/* pages/home/home.wxss */
+@import "../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:40rpx;
+  font-style:normal;
+  color: #EB3F2A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.homeContainer{
+  width:100%;
+  padding: 0 30rpx;
+ 
+   box-sizing: border-box; 
+}
+.homeHead{
+ text-align: center;
+  
+  
+}
+.homeHead>image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+   padding: 50rpx 0 45rpx 0; 
+}
+.homeContent{
+  width: 100%;
+  font-size: 30rpx;
+   margin-bottom: 35rpx; 
+}
+.homeContent>view{
+  width: 100%;
+  height:80rpx;
+  overflow: hidden;
+  line-height: 80rpx;
+   border-bottom: 1px solid #DFDEE1; 
+ 
+}
+.homeContent>view>text{
+  color: #E76430;
+}
+.homeContent>view>text.icon-xiangyou{
+  color: #C3C3C8;
+  float: right;
+}
+.toggleUser{
+  width:100%;
+  height:75rpx;
+  font-size: 26rpx;
+  background-color: #E7622E;
+  color: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 75rpx;
+  
+}

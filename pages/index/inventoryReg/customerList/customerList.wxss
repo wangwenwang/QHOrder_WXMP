@@ -1,0 +1,101 @@
+/* pages/index/inventoryReg/customerList/customerList.wxss */
+@import "../../../../lib/style/font.wxss";
+.customerList{
+  width:100%;
+  height: 100%;
+  background-color: #EDEDF2;
+  overflow: scroll;
+}
+.icon-sousuo {
+  font-family:"iconfont" !important;
+  font-size:13px;
+  color: #86878B;
+  position: absolute;
+  left:25rpx;
+  top:-3px;
+}
+.customerList>.search{
+  text-align: center;
+  position: relative;
+  width:720rpx;
+  height:28px;
+  color: #86878B;
+  line-height: 28px;
+  font-size: 25rpx;
+  background-color: #fff;
+  margin: 15rpx auto;
+  border-radius: 10rpx;
+}
+.customerList>.listData{
+  width: 100%;
+  height: 170rpx;
+  background-color: #fff;
+  margin-bottom: 5rpx;
+  border-radius: 10rpx;
+  font-size: 25rpx;
+  padding: 5rpx 30rpx;
+  box-sizing: border-box;
+}
+.customerList>.listData>view{
+  margin-top: 9rpx;
+}
+.customerList>.listData text{
+  color: red;
+}
+/* //弹出框 */
+.selectAddress{
+  width:100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top:0;
+  left: 0;
+}
+.selectAddress>.addressContent{
+  width:678rpx;
+  height: 460rpx;
+  background-color: #EDEDF2;
+  margin: 50% auto;
+  padding:15rpx 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+scroll-view{
+  max-height: 310rpx;
+}
+.addressHead{
+  font-size: 26rpx;
+  margin-bottom: 12rpx;
+}
+.addressList{
+  width:100%;
+  background-color: #fff;
+  font-size: 22rpx;
+  padding:15rpx;
+  box-sizing: border-box;
+  margin-bottom: 5rpx;
+}
+.addressList>view{
+  margin-bottom: 12rpx;
+}
+.addressList text{
+  color: red;
+}
+.addressContent>.add-foot{
+  width:100%;
+  height: 85rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #EDEDF2;
+}
+.addressContent>.add-foot>.cancel{
+  width:535rpx;
+  height: 65rpx;
+  background-color: #E7622E;
+  font-size: 28rpx;
+  line-height: 65rpx;
+  text-align: center;
+  color: #fff;
+  margin: 10rpx auto;
+}

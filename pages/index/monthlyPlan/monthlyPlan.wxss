@@ -1,0 +1,111 @@
+/* pages/index/monthlyPlan/monthlyPlan.wxss */
+@import "../../../lib/style/font.wxss";
+.icon-xiangxia {
+  font-family:"iconfont" !important;
+  font-size:20rpx;
+  color: #EC7426;
+  position: absolute;
+  right: 0;
+  top:-3rpx;
+}
+.icon-dingdan{
+  font-size:128rpx;
+  margin-bottom: 25rpx;
+}
+.monthlyPlan{
+  width:100%;
+  font-size: 26rpx;
+  background-color: #EDEDF2;
+}
+.PlanHead{
+  width: 100%;
+  height: 80rpx;
+  position: fixed;
+  top: 0;
+  left:0;
+  background-color: #fff;
+   border-bottom: 1rpx solid #EC7426;
+}
+.monthlyPlanHead{
+  width:160rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #E7612E;
+  margin: 0 auto;
+  position: relative;
+}
+
+.planList{
+  width:100%;
+  border-bottom: 15rpx solid #EDEDF2;
+ 
+  margin-top: 81rpx;
+}
+.planList text{
+  color: red;
+}
+.listData{
+  width:100%;
+  height: 180rpx;
+  margin-bottom: 15rpx;
+  background-color: #fff;
+  padding: 15rpx;
+  box-sizing: border-box;
+}
+.listData>view{
+  margin-bottom: 5rpx;
+}
+/* 数据类型选择 */
+.typeList{
+  width:100%;
+  height: 0rpx;
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  color: #fff;
+  top:80rpx;
+  left: 0;
+}
+.typeList>view{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: rgba(244,132,38,0.8);
+  box-sizing: border-box;
+  border-bottom: 3rpx solid #E4E4E6;
+}
+/*共几条记录  */
+.totalNum{
+  width: 100%;
+  text-align: center;
+  height: 75rpx;
+  line-height: 75rpx;
+  color: #4C4C4C;
+}
+/*新建计划按钮  */
+.newBtn{
+  width:255rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  text-align: center;
+  background-color: #FB0315;
+  color: #fff;
+  position: fixed;
+  bottom: 38rpx;
+  left: 247.5rpx;
+}
+.kong{
+  width:100%;
+  height: 80rpx;
+}
+
+/*没有数据提示  */
+.nullNote{
+  width: 100%;
+  height:226rpx;
+  color: #D5D5D5;
+  text-align: center;
+  position: absolute;
+  top:400rpx;
+  left: 0;
+}

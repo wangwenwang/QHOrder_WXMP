@@ -1,0 +1,147 @@
+<!--pages/order/selectGoods/selectGoods.wxml-->
+<view class='selectGoods'>
+  <view class='selectHead'>
+    <view bindtap='leftOpen'>类型：
+      <text>{{showType}}</text>
+    </view>
+    <view bindtap='rightOpen'>分类：
+      <text>{{showClass}}</text>
+    </view>
+    <view>促销信息</view>
+    <view bindtap='elseBind'>{{elseInfo}}</view>
+  </view>
+   <view class='search'> 
+      <icon class='iconfont icon-sousuo'></icon>  
+      <input bindinput='search' placeholder='按商品名称搜索'></input>
+  </view>
+  <view class='selectContainer'>
+    <view class='address' style='display:{{addressHidden}}'>
+      <view>发货方地址：广东省深圳市龙华区民治街道328号</view>
+      <view>供应商名称：入库供应商测试客户</view>
+    </view>
+    <view class='selectGoodsList' bindtap='salesBind' id="{{idx}}" wx:for="{{goodsList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+      <view class='icon'>
+        <i class="iconfont icon-liwu"></i>
+      </view>
+      <view class='listCenter'>
+        <view>名称：
+          <text>{{itemName.PRODUCT_NAME_show}}</text>
+        </view>
+        <view>规格：
+          <text>{{itemName.PRODUCT_DESC}}</text>
+        </view>
+        <view>原价：
+          <text>¥{{itemName.PRODUCT_PRICE}}</text>
+        </view>
+      </view>
+      <view class='listLast'>
+        <icon class="iconfont icon-jian" id="{{idx}}" catchtap='jian'></icon>
+        <text catchtap='entryShow' id='{{idx}}' data-element="页面">{{number[itemName.IDX]}}</text>
+        <icon class="iconfont icon-jia" id="{{idx}}" catchtap='jia'></icon>
+      </view>
+      <view class='salesInfo' wx:if="{{itemName.PRODUCT_POLICY.length}}"  style='display:{{monthlySales}}'>
+        <view class='saleShow'>
+          <icon  class="iconfont icon-xiangyou2"></icon>
+          <text>促销信息</text>
+        </view>
+        <view class='salesHidden' style='display:{{salesHidden[idx]}}' >
+          <view  wx:for="{{itemName.PRODUCT_POLICY}}" wx:for-index="index" wx:for-item='item' wx:key="key">
+            <icon class="iconfont icon-iconfontzhizuobiaozhun02100"></icon>
+            <text>{{item.POLICY_NAME}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!--购物车  -->
+<view class='foot_cart' animation="{{animationData3}}">
+  <view class='foot_top' bindtap='cartShow'>
+    <view  class="iconfont icon-gouwuche"></view>
+    <view class='totalNum'>总数：
+      <text>{{totalNum}}</text>
+    </view>
+    <view class='totalPrice'>总价：
+      <text>{{totalPrice}}</text>
+    </view>
+    <view class='submit' catchtap='submit'>提交</view>
+  </view>
+  <view class='foot_bottom'>
+    <view>已选商品详情：</view>
+    <scroll-view scroll-y style='height:100px'>
+    <view class='cartGoodsList' id="{{idx}}" wx:for="{{submitArr}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+      <view class='cartListLeft'>{{itemName.PRODUCT_NAME}}</view>
+      <view class='listLast'>
+        <icon class="iconfont icon-jian" id="{{idx}}" bindtap='jian2'></icon>
+        <text bindtap='entryShow' id="{{idx}}"  data-element="购物车">{{itemName.number}}</text>
+        <icon class="iconfont icon-jia" id="{{idx}}" bindtap='jia2'></icon>
+      </view>
+    </view>
+    </scroll-view>
+  </view>
+</view>
+
+<!--输入框  -->
+<view class='entryNumber' style='display:{{isHidden}}'>
+  <view class='entry_contaniner'>
+    <view>请输入产品数量</view>
+    <input bindinput='goodsNum' type='number'></input>
+    <view class='btn'>
+      <view class='en_cancel' bindtap='cancel_entry'>取消</view>
+      <view class='en_ensure' bindtap='ensure_entry'>确定</view>
+    </view>
+  </view>
+</view>
+
+<!-- 其他信息 -->
+<view class='elseInfo' style='display:{{elseHidden}}'>
+  <view class='info_contaniner'>
+    <view>{{elseInfo}}：</view>
+    <view>目标客户：
+      <text>{{options.PARTY_NAME}}</text>
+    </view>
+    <view>客户名称：
+      <text style='margin-right:100rpx'>{{options.CONTACT_PERSON}}</text>
+      <text>{{options.CONTACT_TEL}}</text>
+    </view>
+    <view>目标地址：
+      <text>{{options.ADDRESS_INFO }}</text>
+    </view>
+    <view class='pay_way' bindtap='selectPayWay' style='display:{{payWayHidden}}'>
+      <text>付款方式：</text>
+      <text class='payWay'>{{payDatalist[clickNum].Text}}</text>
+      <text class="iconfont icon-xiangzuo"></text>
+    </view>
+    <view class='select_pay' style='display:{{payHidden}}'>
+      <view bindtap='payBind' id="{{idx}}" wx:for="{{payDatalist}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+        <text>{{itemName.Text}}</text>
+        <icon id="{{idx}}" style='display:{{succHidden[idx]}}' type='success_no_circle'></icon>
+      </view>
+    </view>
+    <view class='ensure_btn' bindtap='elseInfo_submit'>确认</view>
+
+  </view>
+</view>
+
+<!--左侧边栏  -->
+<view class='leftContainer' animation="{{animationData}}">
+  <scroll-view scroll-y style='height:1060rpx'>
+    <view bindtap='reList'>全部</view>
+    <view id="{{idx}}" bindtap='reTypeList' wx:for="{{typeList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">{{itemName}}</view>
+  </scroll-view>
+</view>
+
+<!--右侧边栏  -->
+<view class='rightContainer' animation="{{animationData2}}">
+  <scroll-view scroll-y style='height:1060rpx'>
+    <view bindtap='reList'  data-element="分类">全部</view>
+    <view id="{{idx}}" bindtap='reClassList' wx:for="{{classList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">{{itemName}}</view>
+  </scroll-view>
+</view>
+
+<!--  提示信息-->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

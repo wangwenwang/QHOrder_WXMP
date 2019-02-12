@@ -1,0 +1,7 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#EC7426",
+  "navigationBarTitleText": "库存登记表",
+  "navigationBarTextStyle": "#fff",
+  "enablePullDownRefresh": true
+}

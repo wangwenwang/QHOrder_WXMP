@@ -1,0 +1,35 @@
+<!--pages/index/billList/feeList/feeList.wxml-->
+<view class='feeListContainer'>
+  <view class='feeDate'>{{MONTH_DATE}}</view>
+  <view class='customerInfo'>
+    <view>客户代码：<text>{{result.PARTY_CODE}}</text></view>
+    <view>客户名称：<text>{{result.PARTY_NAME}}</text></view>
+    <view>业务代码：<text>{{result.BUSINESS_CODE}}</text></view>
+    <view>业务名称：<text>{{result.BUSINESS_NAME}}</text></view>
+  </view>
+  <view class='detail' bindtap='deployDetail'>{{detailNotice}}<i animation="{{animationData}}" class="iconfont icon-down"></i></view>
+  <view class='listDetail' style='display:{{detailHidden}}'>
+    <view class='detailInfo' id="{{idx}}" wx:for="{{AppBusinessFeeList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+      <view>费用名称：<text>{{itemName.FEE_NAME}}</text></view>
+      <view>费用金额：<text>{{itemName.FEE_AMOUNT}}</text></view>
+      <view>产生时间：<text>{{itemName.FEE_DATE}}</text></view>
+    </view>
+  </view>
+  <view class='money'>
+    <view>上月留存提货余额：<text>{{result.LastMonth}}</text></view>
+    <view>加本月累计付款及代垫费用金额：<text>{{result.ThisMonthPostive}}</text></view>
+    <view>减本月累计提货总额：<text>{{result.ThisMonthMinus}}</text></view>
+    <view>本月留存提货余额：<text>{{result.ThisMonth}}</text></view>
+  </view>
+  <view class='notice'>
+    
+    <view class='footHead'><icon type='info'></icon>尊敬的各经销商客户：以下为我司出具的对账单须知事项</view>
+    
+    <view>1、次月10号前为我司具所有客户对账单</view>
+    <view>2、对账单余额为截止当月月末余额</view>
+    <view>3、本月留存提货余额，若显示负数，表示客户欠我司货款。</view>
+    
+    
+    
+  </view>
+</view>

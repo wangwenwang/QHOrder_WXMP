@@ -1,0 +1,79 @@
+<!--pages/order/selectGoods/orderCertain/addGift/addGift.wxml-->
+<view class='addGiftContainer'>
+  <view class='head'>
+    <text bindtap='submit'>确认添加</text>
+  </view>
+  <view class='calssType'>
+    <view  class='goodsHead'>品类：</view>
+    <view class='classList' bindtap='selectClass' id="{{idx}}" wx:for="{{GiftClasses}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+      <text>{{itemName.TYPE_NAME}}</text>
+      
+      <view>剩余：<text>{{overplus[itemName.TYPE_NAME]}}</text></view>
+      <view class='margin_right'>可选：<text>{{itemName.QTY}}</text></view>
+    </view>
+  </view>
+  <view class='gift'>
+    <view class='goodsHead'>产品：</view>
+    <view class='giftList'  id="{{idx}}" wx:for="{{giftList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+      <view class='icon'>
+        <i class="iconfont icon-liwu"></i>
+      </view>
+      <view class='listCenter'>
+        <view>名称：
+          <text>{{itemName.PRODUCT_NAME}}</text>
+        </view>
+        <view>规格：
+          <text>{{itemName.PRODUCT_NAME}}</text>
+        </view>
+      </view>
+      <view class='listLast'>
+        <icon class="iconfont icon-jian" id="{{idx}}" bindtap='jian'></icon>
+        <text bindtap='entryShow' id='{{idx}}' data-element="页面">{{number[itemName.IDX]}}</text>
+        <icon class="iconfont icon-jia" id="{{idx}}" bindtap='jia'></icon>
+      </view>
+    </view>
+  </view>
+</view>
+<!--购物车  -->
+<view class='foot_cart' animation="{{animationData3}}">
+  <view class='foot_top'>
+    <view class='totalNum'>可选：
+      <text>{{optionalNum}}</text>
+    </view>
+    <view>已选：
+      <text>{{totalNum}}</text>
+    </view>
+     <view class='submit'  bindtap='cartShow'>详情</view> 
+  </view>
+  <view class='foot_bottom'>
+    <view>已选商品详情：</view>
+    <scroll-view scroll-y style='height:100px'>
+    <view class='cartGoodsList' id="{{idx}}" wx:for="{{submitArr}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+      <view class='cartListLeft'>{{itemName.PRODUCT_NAME}}</view>
+      <view class='listLast'>
+        <icon class="iconfont icon-jian" id="{{idx}}" bindtap='jian2'></icon>
+        <text id="{{idx}}"  bindtap='entryShow'  data-element="购物车">{{itemName.PO_QTY}}</text>
+        <icon class="iconfont icon-jia" id="{{idx}}" bindtap='jia2'></icon>
+      </view>
+    </view>
+    
+    </scroll-view>
+  </view>
+</view>
+<!--输入框  -->
+<view class='entryNumber' style='display:{{isHidden}}'>
+  <view class='entry_contaniner'>
+    <view>请输入产品数量</view>
+    <input bindinput='goodsNum' type='number'></input>
+    <view class='btn'>
+      <view class='en_cancel' bindtap='cancel_entry'>取消</view>
+      <view class='en_ensure' bindtap='ensure_entry'>确定</view>
+    </view>
+  </view>
+</view>
+<!--提示信息  -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>
+
+

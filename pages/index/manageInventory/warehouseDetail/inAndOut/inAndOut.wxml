@@ -1,0 +1,12 @@
+<!--pages/index/manageInventory/warehouseDetail/inAndOut/inAndOut.wxml-->
+<view class='inAndOut'>
+  <view class='warehouseList'  wx:for="{{Info}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+    <view>库存批次：<text>{{itemName.STOCK_NO}}</text></view>
+    <view class='date'><view>生产日期：<text>{{itemName.PRODUCTION_DATE}}</text></view><view><text>{{itemName.STOCK_QTY}}</text>{{itemName.STOCK_UOM}}</view></view>
+    <view>操作日期：<text>{{itemName.CHANGE_DATE}}</text></view>
+  </view>
+</view>
+<!--提示信息  -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

@@ -1,0 +1,14 @@
+<!--pages/index/manageInventory/outWarehouseDetail/outWarehouseDetail.wxml-->
+<view class='putWarehouseDetail'>
+  <view class='putWarehouseList' bindtap='toPutDetails' id="{{idx}}" wx:for="{{dataList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+    <view>出库单号：<text>{{itemName.OUTPUT_NO}}</text></view>
+    <view>门店名称：<text>{{itemName.PARTY_NAME}}</text></view>
+    <view>日期：<text>{{itemName.ADD_DATE}}</text><text class='float' style='color:{{itemName.OUTPUT_TYPE_color}}'>{{itemName.OUTPUT_TYPE}}</text></view>
+    <view>数量：<text>{{itemName.OUTPUT_QTY}}.0</text><text class='float red' style='color:{{itemName.OUTPUT_WORKFLOW_color}}'>{{itemName.OUTPUT_WORKFLOW}}</text></view>
+  </view>
+</view>
+<view  class='nullNote' style='display:{{nullHidden}}'>
+  <icon class="iconfont icon-dingdan"></icon>
+  <view>您还没有出库明细</view>
+</view>
+

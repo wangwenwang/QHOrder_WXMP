@@ -1,0 +1,30 @@
+<!--pages/index/monthlyPlan/monthlyPlan.wxml-->
+<view class='monthlyPlan'>
+  <view class='PlanHead'>
+      <view class='monthlyPlanHead' bindtap='selectType'><text>{{typeText}}</text><icon class="iconfont icon-xiangxia"  animation="{{animationData2}}"></icon></view>
+  </view>
+  
+  <view class='typeList'  animation="{{animationData}}">
+    <view bindtap='newBuilt'>新建</view>
+    <view bindtap='checked'>已审核</view>
+    <view bindtap='canceled'>已取消</view>
+  </view>
+  <view class='planList' wx:if="{{isHaveData}}">
+    <view class='listData' bindtap='toPlanDateil'  id="{{idx}}" wx:for="{{listData}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+      <view>计划月份：<text>{{itemName.REQUEST_ISSUE}}</text></view>
+      <view>订单号为：<text>{{itemName.ORD_NO}}</text></view>
+      <view>创建时间：<text>{{itemName.ADD_DATE}}</text></view>
+      <view>客户名称：<text>{{itemName.TO_NAME}}</text></view>
+    </view>
+    <view class='totalNum'>共计{{totalNum}}条记录</view>
+  </view>
+  <view class='nullNote' wx:else>
+    <icon class="iconfont icon-dingdan"></icon>
+    <view>您还没有{{dataState}}的订单</view>
+  </view> 
+  <view class='newBtn' bindtap='newPlan'>新建计划</view>
+  
+</view>
+<view class='kong'></view>
+ 
+

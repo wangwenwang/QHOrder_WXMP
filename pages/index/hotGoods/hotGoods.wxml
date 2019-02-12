@@ -1,0 +1,21 @@
+<!--pages/index/hotGoods/hotGoods.wxml-->
+<view class='hotContainer'>
+  <view class='goods'  wx:for="{{goodsList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+     <icon class="iconfont icon-rexiaoshangpin"></icon>
+    <view>
+      <view>名称：
+        <text>{{itemName.PRODUCT_NAME}}</text>
+      </view>
+      <view>规格：
+        <text>{{itemName.PRODUCT_DESC}}</text>
+      </view>
+      <view>价格：
+        <text>¥{{itemName.PRODUCT_PRICE}}.0</text>
+      </view>
+    </view>
+  </view>
+</view>
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>
+

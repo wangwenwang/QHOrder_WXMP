@@ -1,0 +1,353 @@
+/* pages/order/selectGoods/selectGoods.wxss */
+@import "../../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:60rpx;
+  margin-bottom: 25rpx;
+  color: #EB7331;
+}
+.selectGoods{
+  width: 100%;
+  overflow: hidden;
+}
+.selectGoods>.selectHead{
+  width:100%;
+  height: 85rpx;
+  position: fixed;
+  background-color: #fff;
+  top:0;
+  left:0;
+  overflow: hidden;
+  border-bottom: 1rpx solid #E8E7EE;
+  z-index: 555;
+}
+.selectGoods>.selectHead>view{
+  float: left;
+  width: 187.5rpx;
+  box-sizing: border-box;
+  height: 85rpx;
+  line-height: 85rpx;
+  text-align: center;
+  font-size: 22rpx;
+  border-right: 1rpx solid #E8E7EE;
+}
+.selectGoods>.selectHead>view:last-child{
+  border-right: none;
+}
+.selectGoods>.selectHead>view text{
+  color: red;
+}
+.icon-sousuo {
+  font-family:"iconfont" !important;
+  font-size:30rpx;
+  font-style:normal;
+  position: absolute;
+  left:25rpx;color: #86878B;
+  top:-8rpx;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.selectGoods>.search{
+  text-align: center;
+  position: fixed;
+  top:85rpx;
+  left: 15rpx;
+  width:720rpx;color: #86878B;
+  height:50rpx;
+  line-height: 50rpx;
+  font-size: 25rpx;
+  background-color: #eee;
+  margin: 15rpx auto 0;
+  border-radius: 10rpx;
+}
+.selectGoods>.selectContainer{
+  width:100%;
+  padding-top: 165rpx;
+  padding-bottom: 85rpx;
+}
+.selectGoodsList{
+  overflow: hidden;
+  font-size: 22rpx;
+  border-bottom: 1rpx solid #E8E7EE;
+}
+.icon{
+  width:115rpx;
+  height: 110rpx;
+  line-height: 110rpx; 
+  text-align: center;
+}
+.selectGoodsList>view{
+  float: left;
+  overflow: hidden;
+}
+.selectGoodsList>.listCenter text{
+  color: red;
+}
+.listCenter{
+  width: 460rpx;
+}
+.listCenter>view{
+  line-height: 41rpx;
+}
+.listLast{
+  width:160rpx;
+  height: 110rpx;
+  line-height:110rpx; 
+  text-align: center;
+  overflow: hidden;
+}
+.listLast>text{
+   font-size: 22rpx;
+  width:70rpx;
+  height: 110rpx;
+  overflow: hidden;
+  float: left;
+  text-align: center;
+}
+.listLast>icon{
+  font-size: 45rpx;
+  float: left;
+}
+.salesInfo{
+  width: 100%;
+  margin-left: 20rpx;
+}
+.salesInfo>.saleShow>.icon-xiangyou2{
+  font-size: 25rpx;
+  color: #000;
+}
+.salesHidden{
+  color: red;
+  margin-left: 30rpx;
+}
+.icon-iconfontzhizuobiaozhun02100{
+  font-size: 32rpx;
+  margin-right: 5rpx;
+}
+/*发货方地址  */
+.address{
+  font-size: 26rpx;
+}
+.address>view{
+  width: 100%;
+  padding: 25rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #EDEDF2;
+  margin-top: 5rpx;
+}
+/* 购物车 */
+.foot_cart{
+  width:100%;
+  height:190px;
+  position: fixed;
+  bottom: -150px;
+  left: 0;
+  background-color: #2E2E2E;
+  z-index: 22;
+}
+.foot_cart>.foot_top{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 45rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.icon-gouwuche{
+  font-size: 40rpx;
+  margin-right: 90rpx;
+}
+.totalNum{
+ width:187rpx;
+}
+.totalPrice{
+  width: 266rpx;
+}
+.foot_top{
+  overflow: hidden
+}
+.foot_top>view{
+  color: #fff;
+  font-size: 26rpx;
+  float: left;
+}
+.foot_top text{
+  color: red;
+}
+.foot_top>view.submit{
+  float: right;
+}
+.foot_bottom{
+  width: 100%;
+  height:150px;
+  background-color: #000;
+  color: #fff;
+  font-size: 24rpx;
+  padding:20rpx  28rpx;
+  box-sizing: border-box;
+}
+.cartGoodsList{
+  overflow: hidden;
+  border-bottom: 1px solid #4B4A4B;
+}
+.foot_bottom .listLast{
+  color: red;
+   float: left;
+   height: 78rpx;
+   line-height: 78rpx;
+}
+.cartListLeft{
+  width: 534rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  float: left;
+}
+/*输入数量弹框  */
+.entryNumber{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: rgba(0,0,0,0.5);
+}
+.entry_contaniner{
+  width:455rpx;height:290rpx;
+  margin: 50% auto;
+  background-color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  padding:20rpx  35rpx;
+  box-sizing: border-box;
+}
+.entry_contaniner>input{
+  border: 1px solid #E5E5E5;
+  border-radius: 10rpx;
+  margin: 30rpx 0;
+}
+.entry_contaniner>.btn{
+  overflow: hidden;
+  
+}
+.entry_contaniner>.btn>view{
+  float: left;
+  width: 145rpx;
+  height:60rpx;
+  margin-left: 20rpx;
+  background-color: #E7612E;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+}
+.en_cancel{
+  margin-right: 20rpx;
+  float: right;
+}
+
+/*其他信息  */
+.elseInfo{
+  width:100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: rgba(0,0,0,0.5);
+}
+.info_contaniner{
+  width:678rpx;
+  /* height:410rpx; */
+  background-color: #fff;
+  margin: 30% auto;
+  font-size: 23rpx;
+  padding:30rpx 20rpx 20rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+.info_contaniner>view{
+  margin-bottom: 26rpx;
+}
+.info_contaniner>view text{
+  color: red;
+}
+.pay_way{
+  overflow: hidden;
+}
+.pay_way>text:first-child{
+  color: #000;
+}
+.pay_way>text{
+ float: left;
+}
+.pay_way>.icon-xiangzuo{
+  float: left;
+  color: #000;
+  font-size: 23rpx;
+}
+.payWay{
+  width: 490rpx;
+  text-align: center;
+}
+.select_pay{
+  width: 528rpx;
+  margin-left: 105rpx;
+}
+.select_pay>view{
+  border-bottom: 1px solid #F1F1F5;
+  overflow: hidden;
+}
+.select_pay>view>text{
+  float: left;
+  padding: 10rpx 0; 
+}
+.select_pay>view>icon{
+  float: right;
+}
+.ensure_btn{
+  width:640rpx;
+  height: 60rpx;
+  background-color: #FCB83C;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  margin-top: 40rpx;
+}
+/*左侧边栏  */
+.leftContainer{
+  width:136px;
+  min-height: 100%;
+  background-color:#fff;
+  position: fixed;
+  left: -136px;
+  top:0;
+  padding: 85rpx 0;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  text-align: center;
+  color: red;
+}
+.leftContainer view{
+  border-bottom: 1px solid #ECEBEC;
+  padding: 20rpx 0;
+}
+/*右侧边栏  */
+.rightContainer{
+  width:136px;
+  min-height: 100%;
+  background-color:#fff;
+  position: fixed;
+  right: -136px;
+  top:0;
+  padding-top: 85rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  text-align: center;
+  color: red;
+}
+
+.rightContainer view{
+  border-bottom: 1px solid #ECEBEC;
+  padding: 20rpx 0;
+  
+}

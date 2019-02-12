@@ -1,0 +1,59 @@
+<!--pages/search/orderDetail/orderDetail.wxml-->
+<import src="goodsTemplate/goodsTemplate.wxml"/>
+<view class='oDetailContainer'>
+  <view class='orderInfo'>
+    <view class='infoHead'>订单信息：</view>
+    <view>订单号为：<text>{{ORD_NO}}</text></view>
+    <view>创建时间：<text>{{ORD_DATE_ADD}}</text></view>
+    <view>客户名称：<text>{{ORD_TO_NAME}}</text></view>
+    <view>客户地址：<text>{{ORD_TO_ADDRESS}}</text></view>
+    <view>起始地址：<text>{{ORD_FROM_NAME}}</text></view>
+    <view><view>下单数量：<text>{{ORD_QTY}}箱</text></view><view>订单流程：<text>{{ORD_WORKFLOW}}</text></view></view>
+    <view><view>下单总量：<text>{{ORD_WEIGHT}}吨</text></view><view>订单状态：<text>{{ORD_STATE}}</text></view></view>
+    <view><view>下单体积：<text>{{ORD_VOLUME}}m³</text></view><view>付款方式：<text>{{PAYMENT_TYPE}}</text></view></view>
+  </view>
+  <view class='goodsInfo'>
+    <view class='goodsHead'>货物信息：</view>
+    <view class='goodsContent'>
+      <view class='goodsList' wx:for="{{goodsList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+        <!--货物信息列表  -->
+        <template is="goodsTemplate" data="{{...itemName,orderNum}}"></template>
+      </view>
+    </view>
+  </view>
+  <view class='giftInfo'>
+    <view class='giftHead'>赠品信息：</view>
+    <view class='giftContent'>
+      <view class='goodsList'   wx:for="{{giftList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+        <!--赠品信息列表  -->
+        <template  is="goodsTemplate" data="{{...itemName}}" ></template>
+      </view>
+      <view wx:if="{{!haveGift}}"   class='noneGift'>无赠品</view>
+
+    </view>
+  </view>
+  <view class='elseInfo'>
+    <view>现价：
+      <text>¥{{ACT_PRICE}}</text>
+    </view>
+    <view>满减：
+      <text>{{MJ_info}}</text>
+    </view>
+    
+    <view>付款价：
+      <text>¥{{ACT_PRICE-MJ_PRICE}}</text>
+    </view>
+    <view>备注：
+      <text>{{ORD_REMARK_CONSIGNEE}}</text>
+    </view>
+  </view>
+  
+</view>
+<view class='footer'>
+  <view bindtap='toLogistics'>查看物流信息</view>
+</view>
+
+<!--提示信息  -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

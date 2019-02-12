@@ -1,0 +1,28 @@
+<!--pages/home/home.wxml-->
+<view class='homeContainer'>
+  <view class='homeHead'><image src='{{tempFilePaths}}'></image></view>
+  <view class='homeContent'>
+    <view><icon class='iconfont icon-jiaose'></icon>
+      用户姓名：
+      <text>{{USER_NAME}}</text>
+    </view>
+    <view><icon class='iconfont icon-authorize'></icon>
+      用户角色：
+      <text>{{USER_TYPE}}</text>
+    </view>
+    <view><icon class='iconfont icon-leixing'></icon>
+      业务类型：
+      <text>{{BUSINESS_NAME}}</text>
+    </view>
+    <view bindtap='toRepswd'><icon class='iconfont icon-yuechi-copy'></icon>
+      修改密码
+      <text class='iconfont icon-xiangyou'></text>
+    </view>
+    <view bindtap='toAbout'><icon class='iconfont icon-iconguanyuwomen'></icon>
+      关于
+      <text class='iconfont icon-xiangyou'></text>
+    </view>
+  </view>
+  <view class='toggleUser' bindtap='toggleUser' >切换账号</view>
+</view>
+

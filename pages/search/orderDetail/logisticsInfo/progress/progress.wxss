@@ -1,0 +1,24 @@
+/* pages/search/orderDetail/logisticsInfo/progress/progress.wxss */
+.progressContainer{
+  width:100%;
+  height:100%;
+
+}
+.progressContainer>view{
+  width:100%;
+  height: 90rpx;
+  border-bottom: 1px solid #E8E8E9;
+  overflow: hidden;
+  line-height: 90rpx;
+  font-size: 25rpx;
+}
+.progressContainer>view>icon{
+  font-size: 40rpx;
+  height: 40rpx;
+  float: left;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.progressContainer>view>text{
+  float: left;margin-right: 30rpx;
+}

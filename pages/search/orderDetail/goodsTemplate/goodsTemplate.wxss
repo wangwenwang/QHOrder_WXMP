@@ -1,0 +1,32 @@
+/* pages/search/orderDetail/goodsTemplate/goodsTemplate.wxss */
+@import "../../../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:81rpx;
+  font-style:normal;
+  color: #EB7331;
+  width: 120rpx;
+  float: left;
+  height: 100%;
+  line-height: 180rpx;
+  text-align: center;
+}
+
+.listRight>view{
+   margin-top: 6rpx; 
+}
+.listRight{
+  float: left;
+  height:100%;
+}
+.listRight>view{
+  overflow: hidden;
+}
+.listRight>.bottom>view{
+  float: left;
+  width: 307rpx;
+}
+.listRight text{
+  color: red;
+}
+

@@ -1,0 +1,11 @@
+<!--pages/search/orderDetail/logisticsInfo/line/line.wxml-->
+
+<view class="map_container"> 
+  <map class="map" id="map" longitude="{{longitude}}"  polyline="{{polyline}}" latitude="{{latitude}}" scale="12" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+</view> 
+
+ <!-- <view class='foot'>线路长度：公里</view>  -->
+ 
+ <cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

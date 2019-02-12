@@ -1,0 +1,263 @@
+/* pages/order/selectGoods/orderCertain/orderCertain.wxss */
+@import '../../../../lib/style/font.wxss';
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:30rpx;
+  color: #EB7331;
+}
+.icon-liwu{
+  font-size: 60rpx;
+  
+}
+.icon{
+  width:115rpx;
+  height: 110rpx;
+  line-height: 110rpx; 
+  text-align: center;
+}
+.orderCertain{
+  background-color: #EDEDF2;
+  width:100%;
+ 
+  padding: 28rpx 18rpx;
+  box-sizing: border-box;
+  font-size: 23rpx;
+}
+.orderCertain>view>.head{
+  font-size: 26rpx;
+  margin-bottom: 10rpx;
+}
+.orderCertain>.orderInfo{
+  margin-bottom: 20rpx;
+}
+.orderCertain>.orderInfo>.orderList{
+  width:100%;
+  height: 140rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx 15rpx;
+  box-sizing: border-box;
+  color: #000;
+  margin-bottom: 3rpx;
+}
+.orderList>view{
+  height: 50rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+}
+.floatLeft{
+  float: left;
+}
+.floatRight{
+  float: right;
+}
+.orderCertain text{
+  color: red;
+}
+.listLast{
+  height:50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  overflow: hidden;
+}
+.listLast>text{
+  font-size: 22rpx;
+  width:70rpx;
+  overflow: hidden;
+  float: left;
+  text-align: center;
+}
+.listLast>icon{
+  font-size: 45rpx;
+  float: left;
+}
+.orderCertain text.black{
+  color: #000;
+}
+
+/*赠品   开始*/
+.haveGift{
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  color: #E7612E;
+  padding: 10rpx 0;
+  margin-bottom: 5rpx;
+}
+.haveGift>view{
+  float: left;
+}
+.listCenter{
+  width:400rpx;
+}
+.listCenter>view{
+  overflow: hidden;
+  line-height: 41rpx;
+}
+.listCenter>view>view{
+  float: left
+}
+.org_float{
+  margin-right: 20rpx;
+}
+.gift_right{
+  width: 199rpx;
+   height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+}
+.noneGift{
+  text-align: center;
+  margin: 25rpx 0;
+}
+.noneGift>view{
+  width:146rpx;
+  height: 55rpx;
+  background-color: #E7612E;
+  color: #fff;
+  text-align: center;
+  line-height: 55rpx;
+  border-radius: 5rpx;
+  margin: 0 auto;
+}
+/*赠品   结束*/
+ 
+.total>view{
+  margin-bottom: 10rpx;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+}
+.total>.head{
+  padding: 0;
+}
+.total text{
+  color: red;
+}
+.arrDate{
+  width: 100%;
+  height: 65rpx;
+  line-height: 65rpx;
+  border-radius: 5rpx;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+.arrDate>text{
+  margin:0 25rpx 0 10rpx;
+}
+.arrDate>i,.arrDate>text,.arrDate>view{
+  float: left;
+}
+.arrDate>view{
+  color: red;
+  margin-left: 20rpx;
+}
+textarea{
+  width: 100%;
+  height: 145rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 15rpx;
+  box-sizing: border-box;
+  border-radius: 5rpx;
+}
+.orderCertain_btn{
+  width: 100%;
+  height: 80rpx;
+  background-color: #E7612E;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+}
+
+/* //日期选择器 */
+.mengban{
+  width:100%;
+ height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.mengban>view{
+  width: 715rpx;height: 490rpx;
+  background-color: #fff;
+  position: absolute;
+  top:30%;
+  left: 17.5rpx;
+}
+picker-view{
+  width: 715rpx;height: 410rpx;
+}
+.btn{
+  width:715rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: hidden;
+
+}
+picker-view-column{
+  background-color: #fff;
+}
+.cancel,.ensure{
+  width: 180rpx;
+  height: 65rpx;
+  background-color: #FC6B22;
+  color: #fff;
+  text-align: center;
+  line-height: 65rpx;
+  float: left;
+  font-size: 31rpx;
+  border-radius: 10rpx;
+  margin-left: 117rpx;
+}
+
+/*输入价格调整策略弹框  */
+.entryNumber{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  font-size: 23rpx;
+  top:0;
+  left:0;
+  background-color: rgba(0,0,0,0.5);
+}
+.entryNumber text{
+  color: red;
+}
+.entry_contaniner{
+  width:455rpx;height:290rpx;
+  margin: 50% auto;
+  background-color: #fff;
+  text-align: center;
+  padding:20rpx  35rpx;
+  box-sizing: border-box;
+}
+.entry_contaniner>input{
+  border: 1px solid #E5E5E5;
+  border-radius: 10rpx;
+  margin: 30rpx 0;
+}
+.entry_contaniner>.btn{
+  overflow: hidden;
+  height: 60rpx;
+  width: 100%;
+}
+.entry_contaniner>.btn>view{
+  float: left;
+  width: 145rpx;
+  height:60rpx;
+  margin-left: 20rpx;
+  background-color: #E7612E;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+}
+.en_cancel{
+  margin-right: 20rpx;
+  float: right;
+}

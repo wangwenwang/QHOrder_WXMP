@@ -1,0 +1,28 @@
+/* pages/search/searchTemplate/searchTemplate.wxss */
+
+.searchList{
+  width:100%;
+  height:135rpx;
+  background-color: #fff;
+  border-top: 1px solid #ECECF2;
+  border-bottom: 1px solid #ECECF2;
+  padding: 20rpx 35rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.searchList>.list_left{
+  float: left;
+  font-size: 26rpx;
+}
+.searchList>.list_left>view>text{
+  color: red;
+}
+.searchList>.list_right{
+  float: right;
+  font-weight: 600;
+  font-size: 30rpx;
+  height:95rpx;
+  line-height: 95rpx;
+ 
+  
+}

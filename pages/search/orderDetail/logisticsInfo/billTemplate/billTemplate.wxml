@@ -1,0 +1,25 @@
+<template name='billTemplate'>
+   <view class='billList' bindtap='tologisticsDetail' id="{{idx}}"  wx:for="{{TmsList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key" >
+      <view>订单编号：<text>{{itemName.ORD_NO}}</text></view>
+      <view>装运时间：<text>{{itemName.TMS_DATE_LOAD}}</text></view>
+      <view>出库时间：<text>{{itemName.TMS_DATE_ISSUE}}</text></view>
+      <view>
+        <view>装运编号：<text>{{itemName.TMS_SHIPMENT_NO}}</text></view>
+        <view>数量：<text>{{itemName.ORD_ISSUE_QTY}}.0件</text></view>
+      </view>
+      <view>
+        <view>流程节点：<text>{{itemName.ORD_WORKFLOW}}</text></view>
+        <view>重量：<text>{{itemName.ORD_ISSUE_WEIGHT}}吨</text></view>
+      </view>
+      <view>
+        <view>司机交付：<text>{{itemName.DRIVER_PAY}}</text></view>
+        <view>体积：<text>{{itemName.ORD_ISSUE_VOLUME}}m³</text></view>
+      </view>
+      <view class='btn'>
+        <view class='progress' id="{{idx}}" catchtap='toProgress'>查看进度</view>
+        <view class='line' id="{{idx}}"  catchtap='toLine'>查看路线</view>
+         <view class='sign' wx:if="{{TmsList[idx].sign}}" id="{{idx}}" catchtap='toSign'>查看签名</view> 
+      </view>
+      <icon class='iconfont icon-xiangyou'></icon>
+    </view>
+</template>

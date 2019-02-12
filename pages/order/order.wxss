@@ -1,0 +1,138 @@
+/* pages/order/order.wxss */
+@import "../../lib/style/font.wxss";
+.icon-sousuo {
+  font-family:"iconfont" !important;
+  font-size:13px;
+  font-style:normal;
+  color: #86878B;
+  position: absolute;
+  left:25rpx;
+  top:-3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.orderContainer{
+  width: 100%;
+  background-color: #EDEDF2;
+  overflow: hidden;
+}
+.orderContainer>.search{
+  text-align: center;
+  position: relative;
+  width:720rpx;
+  height:28px;
+  color: #86878B;
+  line-height: 28px;
+  font-size: 25rpx;
+  background-color: #fff;
+  margin: 15rpx auto 0;
+  border-radius: 10rpx;
+}
+.orderContainer>.chooseCust{
+  color: #000;
+  font-size: 30rpx;
+  width:720rpx;
+  margin: 40rpx auto 30rpx;
+  font-weight: 600;
+  overflow: hidden;
+}
+.orderContainer>.chooseCust>text{
+  float: left;
+}
+.orderContainer>.chooseCust>view{
+  float: right;
+  overflow: hidden;
+}
+.orderContainer>.chooseCust>view>icon{
+  font-size: 45rpx;
+  color: #000;
+  float: left;
+}
+.orderContainer>.chooseCust>view>text{
+  width:50rpx;
+  text-align: center;
+  margin: 0 20rpx;
+  font-size: 30rpx;
+  height: 45rpx;
+  line-height: 50rpx;
+  float: left;
+}
+@media screen and (max-width: 345px){
+
+  .orderContainer>.chooseCust>view>text{
+    line-height: 62rpx;
+  }
+}
+.orderContainer>.customerList{
+  width: 100%;
+  height: 170rpx;
+  background-color: #fff;
+  font-size: 25rpx;
+  padding:20rpx 30rpx 10rpx 20rpx;
+  box-sizing: border-box;
+ margin-bottom: 5rpx;
+}
+.customerList>view{
+  height: 25rpx;
+  margin-bottom: 10rpx;
+}
+.customerList>view>text{
+  color: red;
+}
+/* //弹出框 */
+.selectAddress{
+  width:100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top:0;
+  left: 0;
+}
+.selectAddress>.addressContent{
+  width:678rpx;
+  height: 460rpx;
+  background-color: #EDEDF2;
+  margin: 50% auto;
+  padding:15rpx 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+scroll-view{
+  max-height: 310rpx;
+}
+.addressHead{
+  font-size: 26rpx;
+  margin-bottom: 12rpx;
+}
+.addressList{
+  width:100%;
+  background-color: #fff;
+  font-size: 22rpx;
+  padding:15rpx;
+  box-sizing: border-box;
+  margin-bottom: 5rpx;
+}
+.addressList>view{
+  margin-bottom: 12rpx;
+}
+.addressList text{
+  color: red;
+}
+.addressContent>.add-foot{
+  width:100%;
+  height: 85rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #EDEDF2;
+}
+.addressContent>.add-foot>.cancel{
+  width:535rpx;
+  height: 65rpx;
+  background-color: #E7622E;
+  font-size: 28rpx;
+  line-height: 65rpx;
+  text-align: center;
+  color: #fff;
+  margin: 10rpx auto;
+}

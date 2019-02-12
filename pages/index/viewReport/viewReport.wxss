@@ -1,0 +1,95 @@
+/* pages/index/viewReport/viewReport.wxss */
+@import "../../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:28rpx;
+  color: #A4B2B1;
+}
+.reportContainer{
+  width: 100%;
+  height: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+
+}
+.selectReport{
+  font-size: 24rpx;
+  overflow: hidden;
+}
+.selectReport text{
+  color: red;
+}
+.selectReport i{
+  float: right;
+}
+.footer{
+  width:716rpx;
+  height:75rpx;
+  position: fixed;
+  bottom: 0;
+  left: 17rpx;
+}
+.footer>view{
+  width: 348rpx;
+  height: 55rpx;
+  background-color: #EA7023;
+  color: #fff;
+  line-height: 55rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  float: left;
+  font-size: 27rpx;
+ 
+}
+.foot_first{
+   margin-right: 20rpx;
+}
+scroll-view>view{
+  max-width:100%; 
+}
+.canvas{
+  width:6000rpx;  
+  height: 1100rpx;
+}
+/*选择报表类型  */
+.reportType{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 27rpx;
+  z-index: 555;
+}
+.typeContainer{
+  width: 640rpx;
+  height: 325rpx;
+  background-color: #EDEDF2;
+  margin: 50% auto;
+  padding: 28rpx 18rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+}
+.typeHead{
+  margin-bottom: 20rpx;
+}
+.customer,.product{
+  width: 100%;
+  height: 56rpx;
+  background-color: #fff;
+  margin-bottom: 12rpx;
+  text-align: center;
+  line-height: 56rpx;
+  border-radius: 8rpx;
+}
+.typeCancel{
+  width: 535rpx;
+  height: 55rpx;
+  background-color: #EA7023;
+  color: #fff;
+  text-align: center;
+  line-height: 55rpx;
+  border-radius: 8rpx;
+  margin: 30rpx auto;
+}

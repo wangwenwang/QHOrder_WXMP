@@ -1,0 +1,61 @@
+/* pages/index/inventoryReg/customerList/addInventory/confirmInfo/confirmInfo.wxss */
+.confirmInfo{
+  width:100%;
+  font-size: 23rpx;
+  padding-bottom: 130rpx;
+}
+.confirmInfo>.month{
+  width: 100%;
+  height: 77rpx;
+  background-color: #E7E7EC;
+  margin-bottom: 5rpx;
+  text-align: center;
+  line-height: 77rpx;
+}
+.customerInfo{
+  width:100%;
+  height: 165rpx;
+  background-color: #E7E7EC;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-bottom: 30rpx;
+}
+.customerInfo>view{
+  margin-top: 10rpx;  
+}
+.confirmInfo text{
+  color: red;
+}
+.confirmInfo>.goodsList{
+  width:100%;
+  height: 206rpx;
+  background-color: #E7E7EC;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.confirmInfo>.goodsList view{
+  margin-top: 10rpx;
+}
+.previewContainer{
+  width:100%;
+  height: 130rpx;
+  position: fixed;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  font-size: 26rpx;
+}
+.preview{
+  width:705rpx;
+  height: 80rpx;
+  background-color: #F48426;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  margin: 25rpx auto;
+ 
+
+}

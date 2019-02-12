@@ -1,0 +1,201 @@
+/* pages/order/selectGoods/orderCertain/addGift/addGift.wxss */
+@import "../../../../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:60rpx;
+  margin-bottom: 25rpx;
+  color: #EB7331;
+}
+.addGiftContainer{
+  font-size: 26rpx;
+  width: 100%;
+  height: 100%;
+  background-color: #E8E7EE;
+}
+.addGiftContainer text{
+  color: red;
+}
+.addGiftContainer>.head{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #E7612E;
+}
+.addGiftContainer>.head>text{
+  float: right;
+  height: 37rpx;
+  margin-right: 30rpx;
+  color: #E7612E;
+}
+.goodsHead{
+  padding: 30rpx 23rpx 13rpx;
+  color: red;
+}
+.classList{
+  width: 100%;
+  height: 70rpx;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #E8E7EE;
+}
+.margin_right{
+  margin-right: 40rpx;
+}
+.classList>view{
+  float: right;
+}
+.classList>text{
+  float: left;
+}
+/*礼物列表  */
+.giftList{
+  overflow: hidden;
+  font-size: 22rpx;
+  border-bottom: 1rpx solid #E8E7EE;
+  background-color: #fff;
+}
+.icon{
+  width:115rpx;
+  height: 110rpx;
+  line-height: 110rpx; 
+  text-align: center;
+}
+.giftList>view{
+  float: left;
+  overflow: hidden;
+}
+.listLast>text{
+  font-size: 22rpx;
+}
+.giftList>.listCenter text{
+  color: red;
+}
+.listCenter{
+  width: 460rpx;
+}
+.listCenter>view{
+ 
+  margin-top: 18rpx;
+}
+.listLast{
+  width:160rpx;
+  height: 110rpx;
+  line-height:110rpx; 
+  text-align: center;
+  overflow: hidden;
+}
+.listLast>icon{
+  font-size: 45rpx;
+}
+.icon-jian{
+  float: left;
+}
+.icon-jia{
+  float: right;
+}
+/* 购物车 */
+.foot_cart{
+  width:100%;
+  height:190px;
+  position: fixed;
+  bottom: -150px;
+  left: 0;
+  background-color: #2E2E2E;
+  z-index: 22;
+}
+.foot_cart>.foot_top{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 45rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.totalNum{
+ width:187rpx;
+}
+.foot_top{
+  overflow: hidden
+}
+.foot_top>view{
+  color: #fff;
+  font-size: 26rpx;
+  float: left;
+ 
+}
+.foot_top text{
+  color: red;
+}
+.foot_top>view.submit{
+  float: right;
+} 
+.foot_bottom{
+  width: 100%;
+  height:150px;
+  background-color: #000;
+  color: #fff;
+  font-size: 24rpx;
+  padding:20rpx  28rpx;
+  box-sizing: border-box;
+}
+.cartGoodsList{
+  overflow: hidden;
+  border-bottom: 1px solid #4B4A4B;
+}
+.foot_bottom .listLast{
+  color: red;
+   float: left;
+   height: 78rpx;
+   line-height: 78rpx;
+}
+.cartListLeft{
+  width: 534rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  float: left;
+}
+
+/*输入数量弹框  */
+.entryNumber{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: rgba(0,0,0,0.5);
+}
+.entry_contaniner{
+  width:455rpx;height:290rpx;
+  margin: 50% auto;
+  background-color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  padding:20rpx  35rpx;
+  box-sizing: border-box;
+}
+.entry_contaniner>input{
+  border: 1px solid #E5E5E5;
+  border-radius: 10rpx;
+  margin: 30rpx 0;
+}
+.entry_contaniner>.btn{
+  overflow: hidden;
+  
+}
+.entry_contaniner>.btn>view{
+  float: left;
+  width: 145rpx;
+  height:60rpx;
+  margin-left: 20rpx;
+  background-color: #E7612E;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+}
+.en_cancel{
+  margin-right: 20rpx;
+  float: right;
+}

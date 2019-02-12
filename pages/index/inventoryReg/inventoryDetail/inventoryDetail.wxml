@@ -1,0 +1,23 @@
+<!--pages/index/inventoryReg/inventoryDetail/inventoryDetail.wxml-->
+<view class='inventoryDetail'>
+  <view class='firstArea'>
+    <view>业务名：<text>{{Stock.BUSINESS_NAME}}</text></view>
+    <view>客户代码：<text>{{Stock.PARTY_CODE}}</text></view>
+    <view>客户名称：<text>{{Stock.PARTY_NAME}}</text></view>
+    <view>库存月份：<text>{{Stock.STOCK_DATE}}</text></view>
+    <view>填表日期：<text>{{Stock.SUBMIT_DATE}}</text></view>
+  </view>
+  <view class='secondArea'  wx:for="{{AppStock}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+    <view>产品代码：<text>{{itemName.PRODUCT_NO}}</text></view>
+    <view>产品名称：<text>{{itemName.PRODUCT_NAME}}</text></view>
+    <view>生产日期：<text>{{itemName.PRODUCTION_DATE}}</text></view>
+    <view>到期日期：<text>{{itemName.DAOQI}}</text></view>
+    <view><view>数量：<text>{{itemName.STOCK_QTY}}</text></view><view>保质期：<text>{{itemName.EXPIRATION_DAY}}个月</text></view></view>
+    <view><view>产品货龄：<text>{{itemName.HUO_LING}}</text></view><view>填表时货龄：<text>{{itemName.A_ZHUO_LING}}</text></view></view>
+    <view><view>货龄状态：<text>{{itemName.THUO_LING}}</text></view><view>填表货龄状态：<text>{{itemName.A_ZTHUO_LING}}</text></view></view>
+  </view>
+</view>
+
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

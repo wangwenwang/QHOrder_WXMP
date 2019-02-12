@@ -1,0 +1,34 @@
+/* pages/index/hotGoods/hotGoods.wxss */
+@import "../../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:81rpx;
+  font-style:normal;
+  color: #EC7426;
+}
+.hotContainer{
+  width: 100%;
+}
+.goods{
+  width:100%;
+  height: 125rpx;
+  border-bottom: 3rpx solid #EAEBF3;
+  overflow: hidden;
+
+}
+.goods>icon{
+  float:left;
+  width:120rpx;
+  text-align: center;
+  height: 125rpx;
+  line-height: 125rpx;
+}
+.goods>view{
+  float:left;
+  font-size: 25rpx;
+  height: 93rpx;
+  margin-top: 16rpx;
+}
+.goods>view text{
+  color: #FA1B38;
+}

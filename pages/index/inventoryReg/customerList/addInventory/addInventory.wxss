@@ -1,0 +1,145 @@
+/* pages/index/inventoryReg/customerList/addInventory/addInventory.wxss */
+@import "../../../../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:45rpx;
+  color: #EC7426;
+}
+.addInventory{
+  width:100%;
+   font-size: 26rpx;
+   padding-bottom: 130rpx;
+}
+.addInventory>.month{
+  width: 100%;
+  height: 77rpx;
+  overflow: hidden;
+  background-color: #E7E7EC;
+  margin-bottom: 5rpx;
+  text-align: center;
+  line-height: 77rpx;
+}
+.inventoryDate{
+  width: 180rpx;
+  height: 26rpx;
+  display: inline-block;
+  
+}
+.customerInfo{
+  width:100%;
+  height: 165rpx;
+  background-color: #E7E7EC;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-bottom: 30rpx;
+}
+.customerInfo>view{
+  margin-top: 5rpx;  
+}
+.customerInfo text{
+  color: red;
+}
+.goodsList{
+  width:100%;
+  background-color: #E7E7EC;
+  padding:20rpx 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+}
+.goodsTop{
+  overflow: hidden;
+  width:100%;
+  height: 130rpx;
+}
+.goodsTop text{
+  color: red;
+}
+.goodsList .goodsLeft{
+  float: left;
+  width:565rpx;
+  height: 270rpx;
+}
+.goodsList .goodsRight{
+  width:145rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  float: left;
+}
+.icon-jian{
+  margin-right: 55rpx;
+  width: 45rpx;
+}
+.icon-jia{
+  width: 45rpx;
+}
+.goodsList input{
+  border-bottom: 1px solid #F28B31;
+  width:180rpx;
+}
+.quantity{
+  overflow: hidden;
+  padding-bottom: 20rpx;
+}
+.quantity>text{
+  height: 60rpx;
+  line-height: 80rpx;
+}
+.quantity>text,.quantity>input{
+  float: left;
+  display: block;
+}
+.previewContainer{
+  width:100%;
+  height: 130rpx;
+  position: fixed;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  font-size: 26rpx;
+}
+.preview{
+  width:705rpx;
+  height: 80rpx;
+  background-color: #F48426;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  margin: 25rpx auto;
+}
+/* //日期选择器 */
+.mengban{
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+picker-view{
+  width: 715rpx;height: 410rpx;
+  background-color: #fff;
+    margin:40% auto 0;  
+    box-sizing: border-box;
+}
+.btn{
+  width:715rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: hidden;
+}
+.cancel,.ensure{
+  width: 180rpx;
+  height: 65rpx;
+  background-color: #FC6B22;
+  color: #fff;
+  text-align: center;
+  line-height: 65rpx;
+  float: left;
+  font-size: 31rpx;
+  border-radius: 10rpx;
+  margin-left: 117rpx;
+}

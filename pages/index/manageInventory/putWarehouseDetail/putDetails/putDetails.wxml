@@ -1,0 +1,44 @@
+<!--pages/index/manageInventory/putWarehouseDetail/putDetails/putDetails.wxml-->
+<view class='putDetails'>
+  <view class='orderInfo'>
+    <view class='orderHead'>订单信息</view>
+    <view class='orderContent'>
+      <view>入库订单号为：<text>{{orderInfo.INPUT_NO}}</text></view>
+      <view>原单出库单号：<text>{{orderInfo.OUTPUT_NO}}</text></view>
+      <view>制单时间：<text>{{orderInfo.ADD_DATE}}</text></view>
+      <view>供应商：<text>{{orderInfo.SUPPLIER_NAME}}</text></view>
+      <view>起始地点：<text>{{orderInfo.ADDRESS_INFO}}</text></view>
+      <view>客户名称：<text>{{orderInfo.ADDRESS_NAME}}</text></view>
+      <view>目的地址：<text>{{orderInfo.SUPPLIER_ADDRESS}}</text></view>
+      <view class='float'><view>数量：<text>{{orderInfo.INPUT_QTY}}</text></view><view>重量：<text>{{orderInfo.INPUT_WEIGHT}}</text></view><view>体积：<text>{{orderInfo.INPUT_VOLUME}}</text></view></view>
+      
+    </view>
+  </view>
+  <view class='goodsInfo'>
+    <view class='goodsHead'>货物信息</view>
+     <view class='goodsList' wx:for="{{List}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key"> 
+        <!--货物信息列表  -->
+        <icon class="iconfont icon-liwu"></icon>
+        <view class='listRight'>
+          <view>产品代码：
+            <text>{{itemName.PRODUCT_NO}}</text>
+          </view>
+          <view>产品名称：
+            <text>{{itemName.PRODUCT_NAME}}</text>
+          </view>
+          <view class='bottom'><view>数量：<text>{{itemName.INPUT_QTY}}.0{{itemName.INPUT_UOM}}</text></view><view>原价：<text>{{itemName.PRICE}}.00</text></view></view>
+          <view class='bottom'><view>重量：<text>{{itemName.PRODUCT_WEIGHT}}</text></view><view>付款价：<text>¥{{itemName.PRICE}}</text></view></view>
+          <view class='bottom'><view>体积：<text>{{itemName.PRODUCT_VOLUME}}</text></view><view>总价：<text>¥{{itemName.SUM}}</text></view></view>
+        </view>
+      
+    </view>
+  </view>
+</view>
+
+<!--确认入库 按钮  -->
+<view class='btn' style='display:{{isBtnHidden}}'  bindtap='confirm'>确认入库</view>
+
+<!--提示标签  -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

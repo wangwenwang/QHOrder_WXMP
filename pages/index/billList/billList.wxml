@@ -1,0 +1,11 @@
+<!--pages/index/billList/billList.wxml-->
+<view class='billListContainer'>
+  <view class='dataList' bindtap='toFeeList' id="{{idx}}" wx:for="{{billList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+    <view>企业ID号：<text>{{itemName.ENT_IDX}}</text></view>
+    <view>账单名称：<text>{{itemName.BILL_NAME}}</text></view>
+    <view>账单月份：<text>{{itemName.BILL_DATE}}</text></view>
+  </view>
+</view>
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

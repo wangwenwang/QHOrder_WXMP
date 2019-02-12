@@ -1,0 +1,34 @@
+/* pages/index/inventoryReg/inventoryDetail/inventoryDetail.wxss */
+.inventoryDetail{
+  width: 100%;
+  height: 100%;
+  font-size: 26rpx;
+}
+.inventoryDetail>.firstArea{
+  width: 100%;
+  height: 400rpx;
+  border-top: 56rpx solid #EDEDF2;
+  border-bottom: 56rpx solid #EDEDF2;
+}
+.inventoryDetail text{
+  color: red;
+}
+.inventoryDetail>.firstArea>view{
+  margin-top: 20rpx;
+}
+.inventoryDetail>view{
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.inventoryDetail>.secondArea{
+  border-bottom: 1px solid #EEEEF3;
+  padding-bottom: 20rpx;
+}
+.inventoryDetail>.secondArea>view{
+  margin-top: 16rpx;
+  overflow: hidden;
+}
+.inventoryDetail>.secondArea>view>view{
+  float: left;
+  width: 351rpx;
+}

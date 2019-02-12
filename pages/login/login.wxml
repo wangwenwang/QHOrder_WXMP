@@ -1,0 +1,26 @@
+<!--pages/login/login.wxml-->
+<view class='loginContainer'>
+  <input class='userName' name='userName' bindinput='getUserName' placeholder='请输入账号（手机号）' value='{{userName}}'></input>
+  <input class='pswd' type='password' name='password' bindinput='getPassWord' placeholder='请输入密码' value='{{password}}'></input>
+  <button class='login' bindtap='type-select'>登录</button>
+  <button class='reg' bindtap='toReg'>注册</button>
+</view>
+
+<!--业务类型弹出框  -->
+<view class='typeSelect' style="display:{{typeHidden}}" >
+  <view class='typeContainer' >
+    <view class='typeHead'>请选择业务类型</view>
+     <scroll-view scroll-y >
+      <view class='typeContent'>
+        <view class='typeItem'  bindtap='login' id="{{idx}}" wx:for="{{typeList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+          {{itemName.BUSINESS_NAME}}
+        </view>
+      </view>
+    </scroll-view>
+    <view class='typeFoot' bindtap='typeCancle'>取消</view>
+  </view>
+</view>
+<!--提示信息  -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

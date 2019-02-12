@@ -1,0 +1,25 @@
+<!--pages/register/register.wxml-->
+<view class='regContainer'>
+  <view class='basicInfo'>
+    <text>基本信息</text>
+    <input placeholder='手机号'></input>
+    <input placeholder='密码'></input>
+    <input placeholder='确认密码'></input>
+    <input placeholder='真实姓名'></input>
+  </view>
+  <view class='userInfo'>
+    <text>客户信息</text>
+    <input placeholder='客户名称'></input>
+  </view>
+  <view class='userAddress'>
+    <text>客户地址</text>
+    <input placeholder='名字'></input>
+    <input placeholder='联系电话'></input>
+    <input placeholder='所在区域' class='userArea' disabled='disabled' bindtap='selectArea'></input>
+    <input placeholder='详细地址'></input>
+  </view>
+  <button>注册</button>
+</view>
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

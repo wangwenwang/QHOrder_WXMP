@@ -1,0 +1,92 @@
+/* pages/index/manageInventory/putWarehouseDetail/putDetails/putDetails.wxss */
+.putDetails{
+  width:100%;
+  background-color: #EDEDF2;
+  height: 100%;
+  font-size: 26rpx;
+}
+.orderHead,.goodsHead{
+  width:100%;
+  height: 55rpx;
+  background-color: #E1E1E1;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+  line-height: 55rpx;
+}
+.orderContent{
+  width: 100%;
+  padding: 15rpx 20rpx;
+  box-sizing: border-box;
+  
+}
+.orderContent>view{
+  margin-bottom: 15rpx;
+}
+.orderContent text{
+  color: red;
+}
+.orderContent>.float{
+  overflow: hidden;
+}
+.orderContent>.float>view{
+  float: left;
+  width: 236.6rpx;
+}
+.goodsInfo{
+  padding-bottom: 95rpx;
+}
+.goodsList{
+  background-color: #fff;
+  overflow: hidden;
+  padding-bottom: 10rpx;
+  margin-bottom: 10rpx;
+  
+}
+
+/*货物信息  */
+@import "../../../../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:81rpx;
+  font-style:normal;
+  color: #EB7331;
+  width: 120rpx;
+  float: left;
+  height: 100%;
+  line-height: 180rpx;
+  text-align: center;
+}
+
+.listRight>view{
+   margin-top: 6rpx; 
+}
+.listRight{
+  float: left;
+ 
+}
+.listRight>view{
+  overflow: hidden;
+}
+.listRight>.bottom>view{
+  float: left;
+  width: 307rpx;
+}
+.listRight text{
+  color: red;
+}
+
+
+/*确认入库 按钮  */
+.btn{
+  width: 660rpx;
+  height: 68rpx;
+  background-color: #FB0315;
+  color: #fff;
+  line-height: 68rpx;
+  text-align: center;
+  position: fixed;
+  bottom: 26rpx;
+  left: 45rpx;
+  font-size: 26rpx;
+  border-radius: 10rpx;
+}

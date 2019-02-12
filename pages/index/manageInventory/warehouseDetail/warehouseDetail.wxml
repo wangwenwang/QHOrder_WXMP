@@ -1,0 +1,22 @@
+<!--pages/index/manageInventory/warehouseDetail/warehouseDetail.wxml-->
+<view class='warehouseDetail'>
+  <view class='head' bindtap='inAndOut'>
+    <text>流水</text>
+  </view>
+  <view class='goodsInfo'>
+    <view>产品编号：<text>{{PRODUCT_NO}}</text></view>
+    <view>产品名称：<text>{{PRODUCT_NAME}}</text></view>
+    <view>库存数量：<text>{{STOCK_QTY}}{{STOCK_UOM}}</text></view>
+    <view>编辑时间：<text>{{EDIT_DATE}}</text></view>
+  </view>
+  <view class='warehouseList'  wx:for="{{Info}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+    <view>库存批次：<text>{{itemName.STOCK_NO}}</text></view>
+    <view class='date'><view>生产日期：<text>{{itemName.PRODUCT_STATE}}</text></view><view><text>{{itemName.STOCK_QTY}}</text> {{itemName.STOCK_UOM}}</view></view>
+    <view>操作日期：<text>{{itemName.EDIT_DATE}}</text></view>
+  </view>
+</view>
+
+<!--提示信息  -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

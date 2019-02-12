@@ -1,0 +1,18 @@
+ <template name='searchTemplate'>
+ 
+    <view bindtap='toDetail' class='searchList' id="{{idx}}" wx:for="{{dataList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key" >
+      <view class='list_left'>
+        <view>订单号为：
+          <text>{{itemName.ORD_NO}}</text>
+        </view>
+        <view>创建时间：
+          <text>{{itemName.ORD_DATE_ADD}}</text>
+        </view>
+        <view>客户名称：
+          <text>{{itemName.ORD_TO_NAME}}</text>
+        </view>
+      </view>
+      <view class='list_right'>{{itemName.ORD_STATE}}</view>
+    </view>
+  
+  </template>

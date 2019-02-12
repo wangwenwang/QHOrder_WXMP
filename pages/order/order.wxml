@@ -1,0 +1,53 @@
+<!--pages/ order/order.wxml-->
+<view class='orderContainer'>
+  <view class='search'> 
+        <icon class='iconfont icon-sousuo'></icon>  
+        <input bindinput='search' placeholder='按客户名称搜索'></input>
+  </view>
+  <view class='chooseCust'>
+    <text>请选择下单客户</text>
+    <view  wx:if="{{nowPageHide}}">
+      <icon bindtap='toPrev' class='iconfont icon-xiangzuo1'></icon>
+      <text>{{nowPage}}</text>
+      <icon bindtap='toNext' class='iconfont icon-xiangzuo-copy'></icon>
+    </view>
+  </view>
+  <view class='customerList' bindtap='toSelectGoods' id="{{idx}}" wx:for="{{reData}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+    <view>客户类型：
+      <text>{{itemName.PARTY_TYPE}}</text>
+    </view>
+    <view>客户代码：
+      <text>{{itemName.PARTY_CODE}}</text>
+    </view>
+    <view>客户城市：
+      <text>{{itemName.PARTY_CITY}}</text>
+    </view>
+    <view>客户名称：
+      <text>{{itemName.PARTY_NAME}}</text>
+    </view>
+  </view>
+</view>
+
+<!--选择下单客户地址弹框  -->
+<view class='selectAddress' style='display:{{seleHidden}}'>
+  <view class='addressContent'>
+    <view class='addressHead'>请选择下单客户地址</view>
+    <scroll-view scroll-y >
+      <view class='addressList' bindtap='toGoods' id="{{idx}}" wx:for="{{selectAddress}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+        <view>联系人名：<text>{{itemName.CONTACT_PERSON}} {{itemName.CONTACT_TEL}}</text></view>
+        <view>地址代码：<text>{{itemName.ADDRESS_CODE}}</text></view>
+        <view>地址详情：<text>{{itemName.ADDRESS_INFO}}</text></view> 
+      </view>
+    </scroll-view>
+    <view class='add-foot'>
+      <view class='cancel' bindtap='hidden'>取消</view>
+    </view>
+    
+  </view>
+</view>
+
+<!--提示信息  -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>
+

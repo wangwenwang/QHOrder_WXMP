@@ -1,0 +1,18 @@
+/* pages/index/billList/billList.wxss */
+.billListContainer{
+  width:100%;
+  font-size: 25rpx;
+}
+.dataList{
+  width:100%;
+  height: 170rpx;
+  border-bottom: 1px solid #F2F2F6;
+  padding: 25rpx 20rpx;
+  box-sizing: border-box;
+}
+.dataList>view{
+  margin-bottom: 15rpx;
+}
+.dataList text{
+  color: #E7612E;
+}

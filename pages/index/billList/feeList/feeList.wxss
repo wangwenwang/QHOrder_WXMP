@@ -1,0 +1,99 @@
+/* pages/index/billList/feeList/feeList.wxss */
+@import "../../../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:27rpx;
+  color: #fff;
+  margin-left: 40rpx;
+  display: inline-block;
+}
+.feeListContainer{
+  width: 100%;
+  background-color: #EDEDF2;
+  padding: 25rpx 15rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+.feeDate{
+  width: 100%;
+  background-color: #fff;
+  height: 75rpx;
+  line-height: 75rpx;
+  text-align: center;
+  margin-bottom: 40rpx;
+  border-radius: 5rpx;
+}
+.customerInfo{
+  width:100%;
+  height: 240rpx;
+  background-color: #fff;
+  padding: 30rpx 15rpx;
+  box-sizing: border-box;
+  border-radius: 5rpx;
+}
+.customerInfo view{
+  margin-bottom: 15rpx;
+}
+.feeListContainer text{
+  color: #E7612E;
+}
+.detail{
+  width:100%;
+  height: 75rpx;
+  background-color: #41A4FA;
+  color: #fff;
+  line-height: 75rpx;
+  text-align: center;
+  margin: 25rpx 0;
+  border-radius: 5rpx;
+}
+.listDetail{
+  margin-bottom: 25rpx;
+}
+.listDetail>.detailInfo{
+  background-color: #fff;
+  padding: 20rpx 15rpx;
+  box-sizing: border-box;
+  margin-bottom: 5rpx;
+  border-radius: 5rpx;
+}
+.listDetail>.detailInfo>view{
+  margin-bottom: 15rpx;
+}
+.money{
+  width: 100%;
+  height: 308rpx;
+  background-color: #fff;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+  border-radius: 5rpx;
+  margin-bottom: 36rpx;
+}
+.money>view{
+  border-bottom: 1rpx solid #EDEDF2;
+  width:100%;
+  height: 76rpx;
+  line-height: 76rpx;
+
+}
+.notice{
+  width:100%;
+  padding: 40rpx 30rpx 40rpx 57rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 5rpx;
+  color: #585758;
+}
+.notice>view{
+  margin-bottom: 25rpx;
+}
+.footHead{
+
+ 
+  position: relative;
+}
+.footHead>icon{
+  position: absolute;
+  top:0;
+  left: -50rpx;
+}

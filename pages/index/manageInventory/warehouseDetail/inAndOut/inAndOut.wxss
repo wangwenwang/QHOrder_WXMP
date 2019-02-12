@@ -1,0 +1,28 @@
+/* pages/index/manageInventory/warehouseDetail/inAndOut/inAndOut.wxss */
+.inAndOut{
+  width: 100%;
+  font-size: 26rpx;
+}
+.inAndOut text{
+  color: red;
+}
+.warehouseList{
+  width:100%;
+  height: 140rpx;
+  background-color: #E7E7EC;
+  margin-bottom: 10rpx;
+  padding: 15rpx 27rpx;
+  box-sizing: border-box;
+}
+.warehouseList>view{
+  margin-bottom: 5rpx;
+}
+.date{
+  overflow: hidden;
+}
+.date>view:first-child{
+  float: left;
+}
+.date>view:last-child{
+  float: right;
+}

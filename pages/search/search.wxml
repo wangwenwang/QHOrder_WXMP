@@ -1,0 +1,27 @@
+<!--pages/search/search.wxml-->
+<import src="searchTemplate/searchTemplate.wxml"/>
+<view class='searchContainer'>
+  <view class='searchHead'>
+
+    <view bindtap='tabToggle' id='OPEN' class="onPassage {{OPEN?'searchActive':''}}" >
+      在途
+    </view>  
+    <view bindtap='tabToggle' id='CLOSE' class="finished {{CLOSE?'searchActive':''}}">
+      已完成
+    </view>
+    <view bindtap='tabToggle' id='CANCEL' class="canceled {{CANCEL?'searchActive':''}}">
+      已取消
+    </view>
+  </view>
+
+  <!--数据模板  -->
+  <view class='searchResult' wx:if="{{isHaveData}}" >
+    <template is="searchTemplate" data="{{dataList}}"/>
+    <view class='searchTotal'>共计{{dataList.length}}条记录</view>
+  </view>
+
+  <view wx:else class='nullNote'>
+    <icon class="iconfont icon-dingdan"></icon>
+    <view>您还没有{{dataState}}的订单</view>
+  </view>
+</view>

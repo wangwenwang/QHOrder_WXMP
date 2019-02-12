@@ -1,0 +1,66 @@
+/* pages/index/monthlyPlan/planDetail/planDetail.wxss */
+.planDetail{
+  width: 100%;
+  font-size: 26rpx;
+  
+}
+.customerHead,.goodsHead,.totalHead{
+  background-color: #E1E1E1;
+  height: 54rpx;
+  line-height: 54rpx;
+  width:100%;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+}
+.customerContent,.totalContent{
+  width:100%;
+  padding: 20rpx 25rpx;
+  box-sizing: border-box;
+}
+.customerContent>view,.totalContent>view{
+  margin-bottom: 10rpx;
+  overflow: hidden;
+}
+.customerContent>view>view{
+  float: left;
+  width: 350rpx;
+}
+/*货物信息  */
+@import "../../../../lib/style/font.wxss";
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:81rpx;
+  font-style:normal;
+  color: #EB7331;
+  width: 120rpx;
+  float: left;
+  height: 100%;
+  line-height: 180rpx;
+  text-align: center;
+}
+.goodsContent{
+  background-color: #fff;
+  overflow: hidden;
+  padding-bottom: 10rpx;
+  border-bottom: 10rpx solid #E1E1E1;
+  
+}
+.listRight>view{
+   margin-top: 6rpx; 
+}
+.listRight{
+  float: left;
+ 
+}
+.listRight>view{
+  overflow: hidden;
+}
+.listRight>.bottom>view{
+  float: left;
+  width: 307rpx;
+}
+.planDetail text{
+  color: red;
+}
+
+

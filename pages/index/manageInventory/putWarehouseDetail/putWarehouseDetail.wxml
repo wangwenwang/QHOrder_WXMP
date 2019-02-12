@@ -1,0 +1,14 @@
+<!--pages/index/manageInventory/putWarehouseDetail/putWarehouseDetail.wxml-->
+<view class='putWarehouseDetail'>
+  <view class='putWarehouseList' bindtap='toPutDetails' id="{{idx}}" wx:for="{{dataList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+    <view>入库单号：<text>{{itemName.INPUT_NO}}</text></view>
+    <view>原单出库单号：<text>{{itemName.OUTPUT_NO}}</text></view>
+    <view>供应商：<text>{{itemName.SUPPLIER_NAME}}</text></view>
+    <view>日期：<text>{{itemName.ADD_DATE}}</text><text class='float' style='color:{{itemName.INPUT_TYPE_color}}'>{{itemName.INPUT_TYPE}}</text></view>
+    <view>数量：<text>{{itemName.INPUT_QTY}}.0</text><text class='float red' style='color:{{itemName.INPUT_WORKFLOW_color}}'>{{itemName.INPUT_WORKFLOW}}</text></view>
+  </view>
+</view>
+<view  class='nullNote' style='display:{{nullHidden}}'>
+  <icon class="iconfont icon-dingdan"></icon>
+  <view>您还没有入库明细</view>
+</view>

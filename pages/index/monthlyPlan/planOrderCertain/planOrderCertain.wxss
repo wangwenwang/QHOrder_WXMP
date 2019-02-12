@@ -1,0 +1,118 @@
+/* pages/index/monthlyPlan/planOrderCertain/planOrderCertain.wxss */
+.addInventory{
+  width:100%;
+   font-size: 26rpx;
+   padding-bottom: 130rpx;
+}
+.addInventory>.month{
+  width: 100%;
+  height: 77rpx;
+  overflow: hidden;
+  background-color: #E7E7EC;
+  margin-bottom: 5rpx;
+  text-align: center;
+  line-height: 77rpx;
+}
+.inventoryDate{
+  width: 180rpx;
+  height: 26rpx;
+  display: inline-block;
+}
+.customerInfo{
+  width:100%;
+  padding: 10rpx 20rpx;
+  background-color: #E7E7EC;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-bottom: 15rpx;
+}
+.customerInfo>view{
+  height: 46rpx;
+  line-height: 46rpx;
+}
+.customerInfo text{
+  color: red;
+} 
+
+.totalHead{
+  background-color: #E1E1E1;
+  height: 54rpx;
+  line-height: 54rpx;
+  width:100%;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+}
+.totalContent{
+  width:100%;
+  padding: 20rpx 25rpx;
+  box-sizing: border-box;
+}
+.totalContent>view{
+  margin-bottom: 10rpx;
+  overflow: hidden;
+}
+textarea{
+  width: 100%;
+  height: 145rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 15rpx;
+  box-sizing: border-box;
+  border-radius: 5rpx;
+  border: 1rpx solid #000;
+}
+/* //确认按钮 */
+.previewContainer{
+  width:100%;
+  height: 130rpx;
+  position: fixed;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  font-size: 26rpx;
+}
+.preview{
+  width:705rpx;
+  height: 80rpx;
+  background-color: #F48426;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  margin: 25rpx auto;
+}
+/* //日期选择器 */
+.mengban{
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+picker-view{
+  width: 715rpx;height: 410rpx;
+  background-color: #fff;
+    margin:40% auto 0;  
+    box-sizing: border-box;
+}
+.btn{
+  width:715rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: hidden;
+}
+.cancel,.ensure{
+  width: 180rpx;
+  height: 65rpx;
+  background-color: #FC6B22;
+  color: #fff;
+  text-align: center;
+  line-height: 65rpx;
+  float: left;
+  font-size: 31rpx;
+  border-radius: 10rpx;
+  margin-left: 117rpx;
+}

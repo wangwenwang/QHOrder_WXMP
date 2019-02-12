@@ -1,0 +1,31 @@
+<!--pages/search/orderDetail/logisticsInfo/logisticsDetail/logisticsDetail.wxml-->
+<import src="detailTemplate/detailTemplate.wxml"/>
+<view class='logisticsDetail'>
+  <view class='orderInfo'>
+    <view class='infoHead'>订单信息：</view>
+    <view>订单号为：<text>{{ORD_NO}}</text></view>
+    <view>装运编号：<text>{{TMS_SHIPMENT_NO}}</text></view>
+    <view>装运时间：<text>{{TMS_DATE_LOAD}}</text></view>
+    <view>出库时间：<text>{{TMS_DATE_ISSUE}}</text></view>
+    <view>承运商名：<text>{{TMS_FLEET_NAME}}</text></view>
+    <view>司机姓名：<text>{{TMS_DRIVER_NAME}}</text></view>
+    <view><view>司机号码：<text>{{TMS_DRIVER_TEL}}</text></view><view>车牌号码：<text>{{TMS_PLATE_NUMBER}}</text></view></view>
+    <view><view>下单数量：<text>{{ORD_ISSUE_QTY}}.0件</text></view><view>订单流程：<text>{{ORD_WORKFLOW}}</text></view></view>
+    <view><view>下单总重：<text>{{ORD_ISSUE_WEIGHT}}吨</text></view><view>订单状态：<text>{{ORD_STATE}}</text></view></view>
+    <view><view>下单体积：<text>{{ORD_ISSUE_VOLUME}}m³</text></view><view>付款方式：<text>{{DRIVER_PAY}}</text></view></view>
+  </view>
+  <view class='goodsInfo'>
+    <view class='goodsHead'>货物信息：</view>
+    <view class='goodsContent'>
+        <view class='goodsList' wx:for="{{OrderDetails}}"  id="{{idx}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+          <!--货物信息列表  -->
+          <template is="detailTemplate"  data="{{...itemName}}"></template> 
+        </view>  
+    </view>
+  </view>
+</view>
+
+<!--提示信息  -->
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>

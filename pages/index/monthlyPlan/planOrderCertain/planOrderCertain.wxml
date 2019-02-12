@@ -1,0 +1,61 @@
+<!--pages/index/monthlyPlan/planOrderCertain/planOrderCertain.wxml-->
+<view class='addInventory'>
+  <view class='month'>
+    <view>订单月份：<text class='inventoryDate' style='border-bottom:{{textBorder}}' bindtap='monthSelect'>{{inventoryMonth}}</text></view>
+  </view>
+  
+  <view class='customerInfo'>
+    <view>客户类型：<text>{{options.PARTY_TYPE}}</text></view>
+    <view>客户代码：<text>{{options.PARTY_CODE}}</text></view>
+    <view>客户城市：<text>{{options.PARTY_CITY}}</text></view>
+    <view>客户名称：<text>{{options.PARTY_NAME}}</text></view>
+  </view>
+
+  <view class='customerInfo'>
+    <view>联系人名：<text>{{options.CONTACT_PERSON}}</text></view>
+    <view>联系方式：<text>{{options.CONTACT_TEL}}</text></view>
+    <view>地址详情：<text>{{options.ADDRESS_INFO}}</text></view>
+  </view> 
+
+  <view class='customerInfo goodsInfo'  wx:for="{{orderList}}" wx:for-index="idx" wx:for-item='itemName' wx:key="key">
+    <view>名称：<text>{{itemName.PRODUCT_NAME}}</text></view>
+    <view>单价：<text>{{itemName.ORG_PRICE}}</text></view>
+    <view>数量：<text>{{itemName.PO_QTY}}</text></view>
+    <view>总价：<text>{{submitArr[idx].totalPrice}}</text></view>
+  </view>
+
+  <view class='totalInfo'>
+    <view class='totalHead'>汇总信息</view>
+    <view class='totalContent'>
+      <view>总数量：<text>{{totalNum}}</text></view>
+      <view>总金额：<text>{{totalPrice}}</text></view>
+      <view>备注：<textarea  bindinput='CONSIGNEE_REMARK' placeholder='请输入备注信息' maxlength="-1"></textarea></view>
+    </view>
+  </view>
+</view>
+
+<view class='previewContainer'>
+  <view class='preview' bindtap='toConfirmInfo'>确认</view>
+</view>
+
+<!--时间选择器  -->
+<view class='mengban' style='display:{{mbHidden}}'>
+  <view>
+       <picker-view indicator-style="height: 50px;"   value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{years}}" style="line-height: 50px"  wx:for-item='itemName' wx:for-index="idx" wx:key="key">{{itemName}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" style="line-height: 50px"  wx:for-item='itemName' wx:for-index="idx" wx:key="key">{{itemName}}月</view>
+      </picker-view-column>
+    </picker-view>
+    <view class='btn'>
+      <view class='cancel' bindtap='cancel'>取消</view>
+      <view class='ensure' bindtap='ensure'>确认</view>
+    </view>
+  </view>
+</view>
+
+<cover-view style='display:{{tagHidden}}'>
+{{tagContent}}
+</cover-view>
