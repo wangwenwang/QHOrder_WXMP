@@ -2,6 +2,5 @@
   "backgroundTextStyle": "dark",
   "navigationBarBackgroundColor": "#EC7426",
   "navigationBarTitleText": "查单",
-  "navigationBarTextStyle": "#fff",
   "enablePullDownRefresh": true
 }

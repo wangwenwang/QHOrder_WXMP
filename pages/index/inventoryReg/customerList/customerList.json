@@ -1,7 +1,6 @@
 {
-  "backgroundTextStyle": "light",
+   "backgroundTextStyle": "light",
+  "navigationBarTextStyle": "white",
   "navigationBarBackgroundColor": "#EC7426",
-  "navigationBarTitleText": "客户列表",
-  "navigationBarTextStyle": "#fff",
-  "navigator": ""
+  "navigationBarTitleText": "客户列表"  
 }

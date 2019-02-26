@@ -8,14 +8,6 @@
   </swiper>
   </view>
   <view class='option'>
-    <view bindtap='toNews'>
-      <icon class="iconfont icon-zuixinzixun"></icon>
-      <text>最新资讯</text>
-    </view>
-    <view bindtap='toHot'>
-      <icon class="iconfont icon-rexiaoshangpin"></icon>
-      <text>热销产品</text>
-    </view>
     <view bindtap='toReport'>
       <icon class="iconfont icon-huidanchakan"></icon>
       <text>查看报表</text>
@@ -24,21 +16,9 @@
       <icon class="iconfont icon-chakanquanbu"></icon>
       <text>查看订单</text>
     </view>
-    <view bindtap='toInventory' style='display:{{inventoryHidden}}'>
-      <icon class="iconfont icon-dengji"></icon>
-      <text>库存登记</text>
-    </view>
-    <view bindtap='costBill' style='display:{{costBillHidden}}'>
-      <icon class="iconfont icon-yanfayun-daohang-yonghuzhongxin-zhangdanguanli"></icon>
-      <text>费用账单</text>
-    </view>
     <view bindtap='manageInventory' style='display:{{manageInventoryHidden}}'>
       <icon class="iconfont icon-kucun"></icon>
       <text>库存管理</text>
-    </view>
-     <view bindtap='toMonthlyPlan'>
-      <icon class="iconfont icon-jihua"></icon>
-      <text>每月计划</text>
     </view>
   </view>
 </view>

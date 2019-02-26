@@ -1,7 +1,6 @@
 {
   "backgroundTextStyle": "dark",
   "navigationBarBackgroundColor": "#EC7426",
-  "navigationBarTitleText": "出库详情",
-  "navigationBarTextStyle": "#fff",
+  "navigationBarTitleText": "出库详情" ,
   "enablePullDownRefresh": true
 }

@@ -1,7 +1,7 @@
 {
-  "backgroundTextStyle": "light",
+   "backgroundTextStyle": "light",
+  "navigationBarTextStyle": "white",
   "navigationBarBackgroundColor": "#EC7426",
-  "navigationBarTitleText": "出入详情",
-  "navigationBarTextStyle": "#fff",
+  "navigationBarTitleText": "出入详情" ,
   "enablePullDownRefresh": true
 }

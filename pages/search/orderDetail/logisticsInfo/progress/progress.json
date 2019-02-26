@@ -1,7 +1,6 @@
 {
   "backgroundTextStyle": "dark",
   "navigationBarBackgroundColor": "#EC7426",
-  "navigationBarTitleText": "订单进度",
-  "navigationBarTextStyle": "#fff",
+  "navigationBarTitleText": "订单进度" ,
   "enablePullDownRefresh": true
 }

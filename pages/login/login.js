@@ -9,8 +9,8 @@ Page({
   data: {
     typeList: [],
     typeHidden:"none",
-    userName:'',
-    password:'',
+    userName:'15800158000',
+    password:'123456',
     tagContent:"",//提示信息内容
     tagHidden: "none",//提示信息是否出现
   },
@@ -57,8 +57,15 @@ Page({
 
     var globalData = getApp().globalData;
 
-    var typeContent = this.data.typeList[e.target.id]
-  
+    if(e){
+
+      var typeContent = this.data.typeList[e.target.id]
+
+    }else{
+
+      var typeContent = this.data.typeList[0]
+    }
+
     // 改变全局变量
     globalData.BUSINESS_IDX = typeContent.BUSINESS_IDX;
     globalData.BUSINESS_CODE = typeContent.BUSINESS_CODE;
@@ -161,13 +168,38 @@ Page({
             },
             success: function (res) {
               console.log(res)
-              self.setData({
-                typeList: res.data.result
+
+              if(res.data.type==1){
+                self.setData({
+                  typeList: res.data.result
+                })
+                if (res.data.result.length == 1) {
+
+                  self.login();
+                } else {
+
+                  self.setData({
+                    typeHidden: "block"
+                  })
+                }
+              }else{
+                wx.showModal({
+                  title: "提示",
+                  content: res.data.msg
+                })
+              }
+     
+
+            }, fail: function (err) {
+
+              console.log(err)
+              wx.hideLoading();
+
+              wx.showModal({
+                title: "提示",
+                content: "请求失败"
               })
             }
-          })
-          self.setData({
-            typeHidden: "block"
           })
         } else {
           if (res.data.msg){
@@ -194,6 +226,15 @@ Page({
          
         }
 
+      },
+      fail(err){
+
+        wx.hideLoading();
+
+        wx.showModal({
+          title: "提示",
+          content: "请求失败"
+        })
       }
     })
   }

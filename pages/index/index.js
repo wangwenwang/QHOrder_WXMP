@@ -7,9 +7,7 @@ Page({
   data: {
     inventoryHidden: "block",//库存登记 是否隐藏
     costBillHidden: "block",//费用账单 是否隐藏
-    manageInventoryHidden: "block",//库存管理 是否隐藏
     swiperImg: []
-
   },
 
   /**
@@ -20,8 +18,6 @@ Page({
     var self = this;
 
     var BUSINESS_CODE = getApp().globalData.BUSINESS_CODE;
-
-    if ((BUSINESS_CODE.indexOf("YIB") != -1) || (BUSINESS_CODE.indexOf("QH") != -1) || (BUSINESS_CODE.indexOf("TT") != -1)) {
 
       self.setData({
         swiperImg: [
@@ -37,46 +33,6 @@ Page({
           ]
       })
 
-    } else if (BUSINESS_CODE.indexOf("DK") != -1) {
-
-      self.setData({
-        swiperImg: [
-          {
-            "url": "../../lib/swiperImage/DK/banner1.png"
-          }, {
-            "url": "../../lib/swiperImage/DK/banner2.png"
-          }, {
-            "url": "../../lib/swiperImage/DK/banner3.png"
-          }, {
-            "url": "../../lib/swiperImage/DK/banner4.png"
-          }
-        ]
-      })
-    } else if (BUSINESS_CODE.indexOf("MY") != -1) {
-      self.setData({
-        swiperImg: [
-          {
-            "url": "../../lib/swiperImage/MY/banner1.png"
-          }
-        ]
-      })
-    }else{
-
-    }
-
-
-  },
-  //跳转到每月计划页面
-  "toMonthlyPlan": function () {
-    wx.navigateTo({
-      url: 'monthlyPlan/monthlyPlan'
-    })
-  },
-  //跳转到库存登记页面
-  "toInventory": function () {
-    wx.navigateTo({
-      url: 'inventoryReg/inventoryReg'
-    })
   },
   //查看报表
   "toReport": function () {
@@ -84,28 +40,10 @@ Page({
       url: 'viewReport/viewReport'
     })
   },
-  //最新资讯
-  "toNews": function () {
-    wx.navigateTo({
-      url: 'news/news'
-    })
-  },
-  //热销产品
-  "toHot": function () {
-    wx.navigateTo({
-      url: 'hotGoods/hotGoods'
-    })
-  },
   //查看订单
   "searchOrder": function () {
     wx.switchTab({
       url: '../search/search'
-    })
-  },
-  //费用账单
-  "costBill": function () {
-    wx.navigateTo({
-      url: 'inventoryReg/customerList/customerList?costBill=costBill'
     })
   },
   //库存管理
